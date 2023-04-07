@@ -1,5 +1,5 @@
 package stepDefinitions;
 
-public class Cam3Steps {
+public class Cam05Steps {
 
 }
