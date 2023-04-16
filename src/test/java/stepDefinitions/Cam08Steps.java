@@ -1,16 +1,12 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import pages.DialogContent;
 import pages.LeftNav;
 import utilities.GWD;
@@ -62,24 +58,17 @@ public class Cam08Steps {
         WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(dc.saveButton));
         js.executeScript("arguments[0].click();", dc.saveButton);
-
-
-
-
     }
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
         dc.verifyContainsTextFunction(dc.successMessage,"success");
-
     }
 
     @Then("Already exist message should be displayed")
     public void alreadyExistMessageShouldBeDisplayed() {
         dc.clickFunction(dc.close);
         dc.verifyContainsTextFunction(dc.alreadyExist,"already");
-
-
     }
 
     @And("click to Edit button and save button")
@@ -102,11 +91,7 @@ public class Cam08Steps {
         dc.clickFunction(dc.deleteImageButton);
         dc.clickFunction(dc.deleteDialogButton);
         dc.verifyContainsTextFunction(dc.successMessage,"success");
-
     }
-
-
-
 
     @Then("Element should not be displayed")
     public void elementShouldNotBeDisplayed() {

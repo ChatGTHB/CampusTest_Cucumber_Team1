@@ -69,6 +69,7 @@ public class DialogContent extends Parent {
             case "codeInput" : return codeInput;
             case "integrationCode" : return integrationCode;
             case "priorityCode" : return priorityCode;
+            case "toggleBar" : return toggleBar;
             case "academicPeriod" : return academicPeriod;
             case "academicPeriod1" : return academicPeriod1;
             case "gradeLevel" : return gradeLevel;
@@ -77,6 +78,10 @@ public class DialogContent extends Parent {
             case "username" : return username;
             case "password" : return password;
             case "gradeLevel2" : return gradeLevel2;
+            case "editButtonPositionCategories" : return editButtonPositionCategories;
+            case "successMessage" : return successMessage;
+            case "noDataMessage" : return noDataMessage;
+            case "searchButton" : return searchButton;
 
         }
         return null;
@@ -89,17 +94,14 @@ public class DialogContent extends Parent {
         clickFunction(deleteDialogButton);
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    public void editItem(String searchedText,String newText) {
+        sendKeysFunction(searchInput, searchedText);
+        clickFunction(searchButton);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+        clickFunction(editButtonPositionCategories);
+        sendKeysFunction(nameInput, newText);
+        clickFunction(saveButton);
+    }
 
 
 
@@ -153,9 +155,12 @@ public class DialogContent extends Parent {
 
 
 
+    @FindBy(xpath = "(//ms-edit-button)[1]")
+    private WebElement editButtonPositionCategories;
 
 
-
+    @FindBy(xpath = "//div[text()=' There is no data to display ']")
+    private WebElement noDataMessage;
 
 
 
@@ -499,7 +504,7 @@ public WebElement locationType;
 
 
 
-    /**         cam9              */
+/**         cam9              */
 
 
 
@@ -549,7 +554,7 @@ public WebElement locationType;
 
 
 
-    /**         cam10              */
+/**         cam10              */
 
 
 
