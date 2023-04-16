@@ -477,9 +477,11 @@ public WebElement locationType;
     @FindBy(xpath = "//tbody//td[text()='Erzurumlu']")
     public WebElement deletedElement;
 
+    @FindBy(xpath = " //tbody//td[text()='Oltu']")
+    public WebElement deletedElement2;
 
-    @FindBy(xpath = "//tbody/tr/td[2]")
-    public List<WebElement> nameList;
+
+
 
 
 

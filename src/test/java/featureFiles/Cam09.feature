@@ -1,10 +1,3 @@
-#As an Admin User I should be able to Add-Edit-Delete Departments under School Setup
-#
-#Admin User should be able to Add Departments, Edit Departments and Delete Departments for setting different schools.
-#
-#Departments tab should be under Setup > School Setup tab. We should have an option to activate and deactivate Departments. And we should have search function for this page.
-#
-#Please see the attachment for design of the page:
 
 Feature:School Departments  Functionality
 
@@ -39,7 +32,7 @@ Feature:School Departments  Functionality
 
   Scenario: Delete to Departments 2
     When click to  departments
-    Then school location name should not be displayed
+    Then Element should not displayed
 
 
 
