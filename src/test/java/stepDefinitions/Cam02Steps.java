@@ -6,10 +6,6 @@ import io.cucumber.java.en.When;
 import pages.DialogContent;
 import pages.LeftNav;
 
-
-
-
-
 public class Cam02Steps {
 
     LeftNav ln=new LeftNav();
@@ -21,7 +17,6 @@ public class Cam02Steps {
     @And("selects setup")
     public void selectsSetup() {
         ln.clickFunction(ln.getWebElement("setupHumanResources"));
-
     }
     @And("clicks on position categories")
     public void clicksOnPositionCategories() {
@@ -41,7 +36,6 @@ public class Cam02Steps {
     @And("clicks on save button")
     public void clicksOnSaveButton() {
         dc.clickFunction(dc.getWebElement("saveButton"));
-
     }
 
     @Then("Position Category successfully created message is displayed")
@@ -52,7 +46,6 @@ public class Cam02Steps {
     @Then("The Position Category already exists message is displayed")
     public void thePositionCategoryAlreadyExistsMessageIsDisplayed() {
         dc.verifyContainsTextFunction(dc.alreadyExist,"already exist");
-
     }
 
     @And("edit the position category")

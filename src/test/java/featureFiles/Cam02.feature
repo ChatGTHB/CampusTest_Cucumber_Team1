@@ -5,7 +5,6 @@ Feature: Human Resources Setup
     When Enter username and password and click button
     Then User should login successfully
 
-
   Scenario: Adding "Position Categories" (Positive test)
     When User clicks on humanResources
     And selects setup
