@@ -399,6 +399,11 @@ public class LeftNav extends Parent {
 
 /**         cam8              */
 
+    @FindBy(xpath = "//span[text()='School Setup']")
+     public WebElement schoolSetup;
+
+    @FindBy(xpath = "//span[text()='Locations']")
+    public WebElement locations;
 
 
 
@@ -442,15 +447,10 @@ public class LeftNav extends Parent {
 
 
 
+    /**         cam9              */
 
-
-
-
-
- /**         cam9              */
-
-
-
+ @FindBy(xpath = "//span[text()='Departments']")
+ public WebElement departments;
 
 
 
