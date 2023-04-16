@@ -72,34 +72,39 @@ public class Cam09Steps {
     }
 
 
-    @Then("departments name should not be displayed")
-    public void departmentsNameShouldNotBeDisplayed() {
-//        System.out.println(dc.nameList.size());
-//        for (WebElement e : dc.nameList) {
-//            if (e.getText().contains("Oltu")) {
-//                System.out.println("test basarisiz");
-//                Assert.assertFalse(e.getText().contains("Erzurumlu"));
+//    @Then("departments name should not be displayed")
+//    public void departmentsNameShouldNotBeDisplayed() {
+////        System.out.println(dc.nameList.size());
+////        for (WebElement e : dc.nameList) {
+////            if (e.getText().contains("Oltu")) {
+////                System.out.println("test basarisiz");
+////                Assert.assertFalse(e.getText().contains("Erzurumlu"));
+////            }
+////
+////        }
+//
+//
+//        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+////        wait.until(ExpectedConditions.elementToBeClickable(dc.locationType));
+////        System.out.println(dc.nameList.size());
+////
+////
+////      //  wait.until(ExpectedConditions.visibilityOfAllElements(dc.nameList));
+////        Thread.sleep(3000);
+////
+//        boolean varMi=false;
+//        for (int i = 0; i <dc.nameList.size() ; i++) {
+//            wait.until(ExpectedConditions.visibilityOf(dc.nameList.get(i)));
+//            System.out.println(dc.nameList.get(i).getText());
+//            if (dc.nameList.get(i).getText().equals("Oltu")){
+//                varMi=true;
 //            }
-//
+//            Assert.assertFalse(varMi);
 //        }
+//    }
 
-
-        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-//        wait.until(ExpectedConditions.elementToBeClickable(dc.locationType));
-//        System.out.println(dc.nameList.size());
-//
-//
-//      //  wait.until(ExpectedConditions.visibilityOfAllElements(dc.nameList));
-//        Thread.sleep(3000);
-//
-        boolean varMi=false;
-        for (int i = 0; i <dc.nameList.size() ; i++) {
-            wait.until(ExpectedConditions.visibilityOf(dc.nameList.get(i)));
-            System.out.println(dc.nameList.get(i).getText());
-            if (dc.nameList.get(i).getText().equals("Oltu")){
-                varMi=true;
-            }
-            Assert.assertFalse(varMi);
-        }
+    @Then("Element should not displayed")
+    public void elementShouldNotDisplayed() {
+        dc.FoundElement(dc.deletedElement2);
     }
 }
