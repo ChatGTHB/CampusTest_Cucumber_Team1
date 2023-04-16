@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class DialogContent extends Parent {
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -67,7 +69,6 @@ public class DialogContent extends Parent {
             case "codeInput" : return codeInput;
             case "integrationCode" : return integrationCode;
             case "priorityCode" : return priorityCode;
-            case "toggleBar" : return toggleBar;
             case "academicPeriod" : return academicPeriod;
             case "academicPeriod1" : return academicPeriod1;
             case "gradeLevel" : return gradeLevel;
@@ -76,11 +77,10 @@ public class DialogContent extends Parent {
             case "username" : return username;
             case "password" : return password;
             case "gradeLevel2" : return gradeLevel2;
+
         }
         return null;
     }
-
-
     public void deleteItem(String searchedText) {
         sendKeysFunction(searchInput, searchedText);
         clickFunction(searchButton);
@@ -148,6 +148,7 @@ public class DialogContent extends Parent {
 
 
     /**         cam2              */
+
 
 
 
@@ -448,16 +449,37 @@ public class DialogContent extends Parent {
 
 /**         cam8              */
 
+public void FoundElement(WebElement element){
+    try {
+        element.click();
+    }catch (Exception e){
+        System.out.println("Bug: Element not found ");
+    }
+}
+@FindBy(xpath="//div[@id='mat-select-value-5']")
+public WebElement locationType;
 
 
+    @FindBy(xpath="(//button[@mattooltipposition='above'])[2]")
+    public WebElement edit;
 
 
+    @FindBy(xpath="//ms-integer-field[@placeholder='GENERAL.FIELD.CAPACITY']/../../../..")
+    public WebElement capacity2;
 
+    @FindBy(xpath = "//*[contains(text(),'already')]")
+    public WebElement already;
 
 
+    @FindBy(xpath="//button[@aria-label='Close dialog']")
+    public WebElement close;
 
+    @FindBy(xpath = "//tbody//td[text()='Erzurumlu']")
+    public WebElement deletedElement;
 
 
+    @FindBy(xpath = "//tbody/tr/td[2]")
+    public List<WebElement> nameList;
 
 
 
@@ -475,6 +497,7 @@ public class DialogContent extends Parent {
 
 
 
+    /**         cam9              */
 
 
 
@@ -496,7 +519,6 @@ public class DialogContent extends Parent {
 
 
 
-/**         cam9              */
 
 
 
@@ -525,28 +547,7 @@ public class DialogContent extends Parent {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**         cam10              */
+    /**         cam10              */
 
 
 
