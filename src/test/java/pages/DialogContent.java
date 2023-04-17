@@ -78,11 +78,14 @@ public class DialogContent extends Parent {
             case "username" : return username;
             case "password" : return password;
             case "gradeLevel2" : return gradeLevel2;
+            case "editButton" : return editButton;
+            case "successMessage" : return successMessage;
+            case "noDataMessage" : return noDataMessage;
+            case "searchButton" : return searchButton;
+
         }
         return null;
     }
-
-
     public void deleteItem(String searchedText) {
         sendKeysFunction(searchInput, searchedText);
         clickFunction(searchButton);
@@ -91,17 +94,14 @@ public class DialogContent extends Parent {
         clickFunction(deleteDialogButton);
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    public void editItem(String searchedText,String newText) {
+        sendKeysFunction(searchInput, searchedText);
+        clickFunction(searchButton);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+        clickFunction(editButton);
+        sendKeysFunction(nameInput, newText);
+        clickFunction(saveButton);
+    }
 
 
 
@@ -155,8 +155,12 @@ public class DialogContent extends Parent {
 
 
 
+    @FindBy(xpath = "(//ms-edit-button)[1]")
+    private WebElement editButton;
 
 
+    @FindBy(xpath = "//div[text()=' There is no data to display ']")
+    private WebElement noDataMessage;
 
 
 
@@ -450,15 +454,36 @@ public class DialogContent extends Parent {
 
 /**         cam8              */
 
+public void FoundElement(WebElement element){
+    try {
+        element.click();
+    }catch (Exception e){
+        System.out.println("Bug: Element not found ");
+    }
+}
+@FindBy(xpath="//div[@id='mat-select-value-5']")
+public WebElement locationType;
 
 
+    @FindBy(xpath="(//button[@mattooltipposition='above'])[2]")
+    public WebElement edit;
 
 
+    @FindBy(xpath="//ms-integer-field[@placeholder='GENERAL.FIELD.CAPACITY']/../../../..")
+    public WebElement capacity2;
 
+    @FindBy(xpath = "//*[contains(text(),'already')]")
+    public WebElement already;
 
 
+    @FindBy(xpath="//button[@aria-label='Close dialog']")
+    public WebElement close;
 
+    @FindBy(xpath = "//tbody//td[text()='Erzurumlu']")
+    public WebElement deletedElement;
 
+    @FindBy(xpath = " //tbody//td[text()='Oltu']")
+    public WebElement deletedElement2;
 
 
 
@@ -479,6 +504,7 @@ public class DialogContent extends Parent {
 
 
 
+    /**         cam9              */
 
 
 
@@ -498,7 +524,6 @@ public class DialogContent extends Parent {
 
 
 
-/**         cam9              */
 
 
 
@@ -529,26 +554,7 @@ public class DialogContent extends Parent {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**         cam10              */
+    /**         cam10              */
 
 
 

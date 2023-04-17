@@ -43,6 +43,9 @@ public class LeftNav extends Parent {
             case "entranceExamsOne" : return entranceExamsOne;
             case "setupTwo" : return setupTwo;
             case "entranceExamsTwo" : return entranceExamsTwo;
+            case "humanResources" : return humanResources;
+            case "setupHumanResources" : return setupHumanResources;
+            case "positionCategories" : return positionCategories;
         }
         return null;
     }
@@ -103,18 +106,21 @@ public class LeftNav extends Parent {
 
 
 
+    @FindBy(xpath="//span[text()='Human Resources']")
+    private WebElement humanResources;
+
+
+
+
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    private WebElement setupHumanResources;
 
 
 
 
 
-
-
-
-
-
-
-
+    @FindBy(xpath = "//span[text()='Position Categories']")
+    private WebElement positionCategories;
 
 
 
@@ -399,6 +405,11 @@ public class LeftNav extends Parent {
 
 /**         cam8              */
 
+    @FindBy(xpath = "//span[text()='School Setup']")
+     public WebElement schoolSetup;
+
+    @FindBy(xpath = "//span[text()='Locations']")
+    public WebElement locations;
 
 
 
@@ -442,15 +453,10 @@ public class LeftNav extends Parent {
 
 
 
+    /**         cam9              */
 
-
-
-
-
- /**         cam9              */
-
-
-
+ @FindBy(xpath = "//span[text()='Departments']")
+ public WebElement departments;
 
 
 
