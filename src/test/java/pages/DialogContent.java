@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class DialogContent extends Parent {
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -547,6 +549,41 @@ public class DialogContent extends Parent {
 
 
 /**         cam10              */
+
+
+
+    @FindBy(xpath = "//input[@data-placeholder='IBAN']")
+    public WebElement ibanInput;
+
+    @FindBy(xpath = "//div[@class='mat-select-arrow ng-tns-c76-76']")
+    public WebElement currencyInput;
+    @FindBy(xpath = "//*[text()='Bank Account successfully created']")
+    public WebElement bankAccountSuccessfulText;
+    @FindBy(xpath = "//span[text()=' EUR ']")
+    public WebElement EURInput;
+    @FindBy(xpath = "//input[@data-placeholder='Integration Code']")
+    public WebElement IntegrationCodeInput;
+
+    @FindBy(xpath = "//*[contains(text(), 'already exists.')]")
+    public WebElement alreadyExistText;
+
+    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-warn ng-star-inserted']")
+    public WebElement BankAccountsdeleteButton;
+
+    @FindBy(xpath = "//span[text()=' Delete ']")
+    public WebElement deleteConfirmButton;
+
+    @FindBy(xpath = "//*[contains(text(), 'successfully deleted')]")
+    public WebElement bankAccountDeletedText;
+    @FindBy(xpath = "//input[@data-placeholder='Name']")
+    public WebElement searchNameInput;
+    @FindBy(xpath = "//*[text()=' There is no data to display ']")
+    public WebElement noDataToDisplayText;
+
+    @FindBy(xpath = "(//button[@color='accent'])[2]")
+    public WebElement firstEditButton;
+    @FindBy(xpath = "//*[contains(text(), 'successfully')]")
+    public WebElement successText;
 
 
 

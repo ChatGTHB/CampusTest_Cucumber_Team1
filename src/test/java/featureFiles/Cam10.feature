@@ -43,5 +43,5 @@ Feature:  Bank Account Setup
     When Click Setup button Parameters Button and Bank Accounts Button
     And Click Bank Accounts Edit Button
     And Fill the Edit Blanks and save
-    Then  Verify that Element is Visible
+    Then  Verify that Edit Element is Visible
 

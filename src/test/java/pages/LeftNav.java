@@ -499,7 +499,8 @@ public class LeftNav extends Parent {
 
 /**         cam10              */
 
-
+@FindBy(xpath = "//span[text()='Bank Accounts']")
+public WebElement bankAccounts;
 
 
 
