@@ -29,6 +29,20 @@ public class LeftNav extends Parent {
     private WebElement setupTwo;
     @FindBy(xpath="(//span[text()='Entrance Exams'])[2]")
     private WebElement entranceExamsTwo;
+    @FindBy(xpath="//span[text()='Human Resources']")
+    private WebElement humanResources;
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    private WebElement setupHumanResources;
+    @FindBy(xpath = "//span[text()='Position Categories']")
+    private WebElement positionCategories;
+    @FindBy(xpath = "//span[text()='School Setup']")
+    public WebElement schoolSetup;
+    @FindBy(xpath = "//span[text()='Locations']")
+    public WebElement locations;
+    @FindBy(xpath = "//span[text()='Departments']")
+    public WebElement departments;
+    @FindBy(xpath = "//span[text()='Bank Accounts']")
+    public WebElement bankAccounts;
 
     public WebElement getWebElement(String strButton){
 
@@ -100,27 +114,20 @@ public class LeftNav extends Parent {
 
 
 
-    /**         cam2              */
 
 
 
 
 
-    @FindBy(xpath="//span[text()='Human Resources']")
-    private WebElement humanResources;
 
 
 
 
-    @FindBy(xpath = "(//span[text()='Setup'])[3]")
-    private WebElement setupHumanResources;
 
 
 
 
 
-    @FindBy(xpath = "//span[text()='Position Categories']")
-    private WebElement positionCategories;
 
 
 
@@ -153,7 +160,6 @@ public class LeftNav extends Parent {
 
 
 
-    /**         cam3              */
 
 
 
@@ -203,7 +209,6 @@ public class LeftNav extends Parent {
 
 
 
-/**         cam4              */
 
 
 
@@ -253,7 +258,6 @@ public class LeftNav extends Parent {
 
 
 
-/**         cam5              */
 
 
 
@@ -303,7 +307,6 @@ public class LeftNav extends Parent {
 
 
 
-/**         cam6              */
 
 
 
@@ -353,7 +356,6 @@ public class LeftNav extends Parent {
 
 
 
-/**         cam7              */
 
 
 
@@ -403,13 +405,8 @@ public class LeftNav extends Parent {
 
 
 
-/**         cam8              */
 
-    @FindBy(xpath = "//span[text()='School Setup']")
-     public WebElement schoolSetup;
 
-    @FindBy(xpath = "//span[text()='Locations']")
-    public WebElement locations;
 
 
 
@@ -453,10 +450,7 @@ public class LeftNav extends Parent {
 
 
 
-    /**         cam9              */
 
- @FindBy(xpath = "//span[text()='Departments']")
- public WebElement departments;
 
 
 
@@ -503,10 +497,7 @@ public class LeftNav extends Parent {
 
 
 
-/**         cam10              */
 
-@FindBy(xpath = "//span[text()='Bank Accounts']")
-public WebElement bankAccounts;
 
 
 
@@ -554,7 +545,6 @@ public WebElement bankAccounts;
 
 
 
-/**         cam11              */
 
 
 
@@ -604,7 +594,6 @@ public WebElement bankAccounts;
 
 
 
-/**         cam12              */
 
 
 
@@ -654,6 +643,5 @@ public WebElement bankAccounts;
 
 
 
-/**         cam13              */
 
  }
