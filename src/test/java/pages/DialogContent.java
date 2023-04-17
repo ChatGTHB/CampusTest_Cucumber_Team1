@@ -77,7 +77,7 @@ public class DialogContent extends Parent {
             case "username" : return username;
             case "password" : return password;
             case "gradeLevel2" : return gradeLevel2;
-            case "editButtonPositionCategories" : return editButtonPositionCategories;
+            case "editButton" : return editButton;
             case "successMessage" : return successMessage;
             case "noDataMessage" : return noDataMessage;
             case "searchButton" : return searchButton;
@@ -97,7 +97,7 @@ public class DialogContent extends Parent {
         sendKeysFunction(searchInput, searchedText);
         clickFunction(searchButton);
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
-        clickFunction(editButtonPositionCategories);
+        clickFunction(editButton);
         sendKeysFunction(nameInput, newText);
         clickFunction(saveButton);
     }
@@ -155,7 +155,7 @@ public class DialogContent extends Parent {
 
 
     @FindBy(xpath = "(//ms-edit-button)[1]")
-    private WebElement editButtonPositionCategories;
+    private WebElement editButton;
 
 
     @FindBy(xpath = "//div[text()=' There is no data to display ']")
