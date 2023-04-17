@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.util.List;
 
 public class DialogContent extends Parent {
     public DialogContent() {
@@ -58,6 +57,50 @@ public class DialogContent extends Parent {
     private WebElement gradeLevel;
     @FindBy(xpath="(//mat-option//span)[2]")
     private WebElement gradeLevel2;
+    @FindBy(xpath = "(//ms-edit-button)[1]")
+    private WebElement editButton;
+    @FindBy(xpath = "//div[text()=' There is no data to display ']")
+    private WebElement noDataMessage;
+    @FindBy(xpath="//div[@id='mat-select-value-5']")
+    public WebElement locationType;
+    @FindBy(xpath="(//button[@mattooltipposition='above'])[2]")
+    public WebElement edit;
+    @FindBy(xpath="//ms-integer-field[@placeholder='GENERAL.FIELD.CAPACITY']/../../../..")
+    public WebElement capacity2;
+    @FindBy(xpath = "//*[contains(text(),'already')]")
+    public WebElement already;
+    @FindBy(xpath="//button[@aria-label='Close dialog']")
+    public WebElement close;
+    @FindBy(xpath = "//tbody//td[text()='Erzurumlu']")
+    public WebElement deletedElement;
+    @FindBy(xpath = " //tbody//td[text()='Oltu']")
+    public WebElement deletedElement2;
+    @FindBy(xpath = "//input[@data-placeholder='IBAN']")
+    public WebElement ibanInput;
+    @FindBy(xpath = "//div[@class='mat-select-arrow ng-tns-c76-76']")
+    public WebElement currencyInput;
+    @FindBy(xpath = "//*[text()='Bank Account successfully created']")
+    public WebElement bankAccountSuccessfulText;
+    @FindBy(xpath = "//span[text()=' EUR ']")
+    public WebElement EURInput;
+    @FindBy(xpath = "//input[@data-placeholder='Integration Code']")
+    public WebElement IntegrationCodeInput;
+    @FindBy(xpath = "//*[contains(text(), 'already exists.')]")
+    public WebElement alreadyExistText;
+    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-warn ng-star-inserted']")
+    public WebElement BankAccountsdeleteButton;
+    @FindBy(xpath = "//span[text()=' Delete ']")
+    public WebElement deleteConfirmButton;
+    @FindBy(xpath = "//*[contains(text(), 'successfully deleted')]")
+    public WebElement bankAccountDeletedText;
+    @FindBy(xpath = "//input[@data-placeholder='Name']")
+    public WebElement searchNameInput;
+    @FindBy(xpath = "//*[text()=' There is no data to display ']")
+    public WebElement noDataToDisplayText;
+    @FindBy(xpath = "(//button[@color='accent'])[2]")
+    public WebElement firstEditButton;
+    @FindBy(xpath = "//*[contains(text(), 'successfully')]")
+    public WebElement successText;
 
     public WebElement getWebElement(String strButton){
 
@@ -103,387 +146,22 @@ public class DialogContent extends Parent {
         clickFunction(saveButton);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /**         cam2              */
-
-
-
-
-
-    @FindBy(xpath = "(//ms-edit-button)[1]")
-    private WebElement editButton;
-
-
-    @FindBy(xpath = "//div[text()=' There is no data to display ']")
-    private WebElement noDataMessage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /**         cam3              */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**         cam4              */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**         cam5              */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**         cam6              */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**         cam7              */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**         cam8              */
-
-public void FoundElement(WebElement element){
-    try {
-        element.click();
-    }catch (Exception e){
-        System.out.println("Bug: Element not found ");
+    public void FoundElement(WebElement element){
+        try {
+            element.click();
+        }catch (Exception e){
+            System.out.println("Bug: Element not found ");
+        }
     }
-}
-@FindBy(xpath="//div[@id='mat-select-value-5']")
-public WebElement locationType;
 
 
-    @FindBy(xpath="(//button[@mattooltipposition='above'])[2]")
-    public WebElement edit;
 
 
-    @FindBy(xpath="//ms-integer-field[@placeholder='GENERAL.FIELD.CAPACITY']/../../../..")
-    public WebElement capacity2;
 
-    @FindBy(xpath = "//*[contains(text(),'already')]")
-    public WebElement already;
 
 
-    @FindBy(xpath="//button[@aria-label='Close dialog']")
-    public WebElement close;
 
-    @FindBy(xpath = "//tbody//td[text()='Erzurumlu']")
-    public WebElement deletedElement;
 
-    @FindBy(xpath = " //tbody//td[text()='Oltu']")
-    public WebElement deletedElement2;
 
 
 
@@ -504,7 +182,6 @@ public WebElement locationType;
 
 
 
-    /**         cam9              */
 
 
 
@@ -554,42 +231,15 @@ public WebElement locationType;
 
 
 
-    /**         cam10              */
 
 
 
-    @FindBy(xpath = "//input[@data-placeholder='IBAN']")
-    public WebElement ibanInput;
 
-    @FindBy(xpath = "//div[@class='mat-select-arrow ng-tns-c76-76']")
-    public WebElement currencyInput;
-    @FindBy(xpath = "//*[text()='Bank Account successfully created']")
-    public WebElement bankAccountSuccessfulText;
-    @FindBy(xpath = "//span[text()=' EUR ']")
-    public WebElement EURInput;
-    @FindBy(xpath = "//input[@data-placeholder='Integration Code']")
-    public WebElement IntegrationCodeInput;
 
-    @FindBy(xpath = "//*[contains(text(), 'already exists.')]")
-    public WebElement alreadyExistText;
 
-    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-warn ng-star-inserted']")
-    public WebElement BankAccountsdeleteButton;
 
-    @FindBy(xpath = "//span[text()=' Delete ']")
-    public WebElement deleteConfirmButton;
 
-    @FindBy(xpath = "//*[contains(text(), 'successfully deleted')]")
-    public WebElement bankAccountDeletedText;
-    @FindBy(xpath = "//input[@data-placeholder='Name']")
-    public WebElement searchNameInput;
-    @FindBy(xpath = "//*[text()=' There is no data to display ']")
-    public WebElement noDataToDisplayText;
 
-    @FindBy(xpath = "(//button[@color='accent'])[2]")
-    public WebElement firstEditButton;
-    @FindBy(xpath = "//*[contains(text(), 'successfully')]")
-    public WebElement successText;
 
 
 
@@ -639,7 +289,6 @@ public WebElement locationType;
 
 
 
-/**         cam11              */
 
 
 
@@ -689,7 +338,6 @@ public WebElement locationType;
 
 
 
-/**         cam12              */
 
 
 
@@ -739,5 +387,339 @@ public WebElement locationType;
 
 
 
-/**         cam13              */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
