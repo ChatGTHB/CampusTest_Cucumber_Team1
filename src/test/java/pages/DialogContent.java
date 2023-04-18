@@ -152,6 +152,8 @@ public class DialogContent extends Parent {
     public WebElement hamdiTosun;
     @FindBy(xpath = "//td[text()='hamdiTosun']//following::td[5]//div//ms-delete-button//button")
     public WebElement hamdiTosunDeleteButton;
+    @FindBy(xpath = "//td[text()='hamdiTosun']//following::td[5]//div//ms-edit-button//button")
+    public WebElement hamdiTosunEditButton;
 
     public WebElement getWebElement(String strButton){
 

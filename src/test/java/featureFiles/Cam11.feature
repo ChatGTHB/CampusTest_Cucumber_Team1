@@ -24,6 +24,14 @@ Feature:  Bank Account Setup
     And Click Grade Levels save button
     Then Verify that Grade Levels error text
 
+  Scenario: Edit Grade Levels
+
+    When Click Setup button Parameters Button and Grade Levels Button
+    And Click Edit Button
+    And Fill the Blanks and save
+    And Verify that Editable Element is Visible
+
+
 
   Scenario: Delete Grade Levels(Positive)
 
@@ -38,6 +46,5 @@ Feature:  Bank Account Setup
     And Re-enter a deleted data and try to delete First Delete Element
     Then Verify that the first delete key is not visible
 
-    Scenario: Edit Grade Levels
 
 

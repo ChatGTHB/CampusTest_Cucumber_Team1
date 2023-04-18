@@ -17,11 +17,12 @@ import utilities.GWD;
 public class Cam11Steps {
     DialogContent dg = new DialogContent();
     LeftNav ln = new LeftNav();
-    String userNAme= "hamdiTosun";
+    String userNAme = "hamdiTosun";
     String iBan = "19283746";
 
-    int randomNumber = (int)(Math.random()*100000);
+    int randomNumber = (int) (Math.random() * 100000);
     String rndmNumber = String.valueOf(randomNumber);
+
     @When("Click Setup button Parameters Button and Grade Levels Button")
     public void clickSetupButtonParametersButtonAndGradeLevelsButton() {
         ln.clickFunction(ln.setup);
@@ -36,13 +37,12 @@ public class Cam11Steps {
 
     @And("Fill Grade Levels the Blanks")
     public void fillGradeLevelsTheBlanks() {
-        dg.sendKeysFunction(dg.nameInput,userNAme);
-        dg.sendKeysFunction(dg.shortNameGradeLevel,userNAme);
-        dg.sendKeysFunction(dg.orderGradeLevel,"2");
+        dg.sendKeysFunction(dg.nameInput, userNAme);
+        dg.sendKeysFunction(dg.shortNameGradeLevel, userNAme);
+        dg.sendKeysFunction(dg.orderGradeLevel, "2");
 
 
-
- // TODO Sonraki denemede , Next Grade kismini da daoldur !
+        // TODO Sonraki denemede , Next Grade kismini da daoldur !
     }
 
     @And("Click Grade Levels save button")
@@ -52,26 +52,26 @@ public class Cam11Steps {
 
     @Then("Verify that Grade Levels Element is Visible")
     public void verifyThatGradeLevelsElementIsVisible() {
-        dg.verifyContainsTextFunction(dg.successText,"successfully");
+        dg.verifyContainsTextFunction(dg.successText, "successfully");
     }
 
     @And("Fill Grade Levels  the Blanks with same data")
     public void fillGradeLevelsTheBlanksWithSameData() {
-        dg.sendKeysFunction(dg.nameInput,userNAme);
-        dg.sendKeysFunction(dg.shortNameGradeLevel,userNAme);
-        dg.sendKeysFunction(dg.orderGradeLevel,"2");
+        dg.sendKeysFunction(dg.nameInput, userNAme);
+        dg.sendKeysFunction(dg.shortNameGradeLevel, userNAme);
+        dg.sendKeysFunction(dg.orderGradeLevel, "2");
 
     }
 
     @Then("Verify that Grade Levels error text")
     public void verifyThatGradeLevelsErrorText() {
-        dg.verifyContainsTextFunction(dg.alreadyExistText,"exists");
+        dg.verifyContainsTextFunction(dg.alreadyExistText, "exists");
     }
 
     @And("Click Grade Levels first Delete Button")
     public void clickGradeLevelsFirstDeleteButton() {
 
-       dg.clickFunction(dg.hamdiTosunDeleteButton);
+        dg.clickFunction(dg.hamdiTosunDeleteButton);
         dg.clickFunction(dg.deleteConfirmButton);
     }
 
@@ -83,8 +83,12 @@ public class Cam11Steps {
     @And("Re-enter a deleted data and try to delete First Delete Element")
     public void reEnterADeletedDataAndTryToDeleteFirstDeleteElement() {
 
-        boolean varMI = dg.hamdiTosun.;
-
+        boolean varMI = false;
+        for (WebElement a : dg.gradeLevelsIsimler) {
+            if(a.getText().equals("hamdiTosun")){
+                varMI=true;
+            }
+        }
         Assert.assertFalse(varMI);
 
     }
@@ -93,28 +97,19 @@ public class Cam11Steps {
     public void verifyThatTheFirstDeleteKeyIsNotVisible() {
     }
 
-    @And("Click Grade Levels first element  Edit Button")
-    public void clickGradeLevelsFirstElementEditButton() {
+    @And("Click Edit Button")
+    public void clickEditButton() {
+        dg.clickFunction(dg.hamdiTosunEditButton);
     }
 
-    @And("Fill the Grade Levels Blanks and save")
-    public void fillTheGradeLevelsBlanksAndSave() {
+    @And("Fill the Blanks and save")
+    public void fillTheBlanksAndSave() {
+        dg.sendKeysFunction(dg.orderGradeLevel,"3");
+        dg.clickFunction(dg.saveButton);
     }
 
-    @Then("Verify that Grade Levels edited Element  is Visible")
-    public void verifyThatGradeLevelsEditedElementIsVisible() {
-    }
-
-
-    @When("denemeKlaroru")
-    public void denemeklaroru() {
-
-        dg.clickFunction(dg.addButton);
-        for (WebElement a: dg.gradeLevelsIsimler) {
-            System.out.println(a.getText());
-
-        }
-
-
+    @And("Verify that Editable Element is Visible")
+    public void verifyThatEditableElementIsVisible() {
+        dg.verifyContainsTextFunction(dg.successMessage,"successfully");
     }
 }
