@@ -3,6 +3,7 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -15,7 +16,7 @@ import utilities.GWD;
 public class Cam11Steps {
     DialogContent dg = new DialogContent();
     LeftNav ln = new LeftNav();
-    String userNAme= "Hamdi11112345678";
+    String userNAme= "hamdiTosun";
     String iBan = "19283746";
 
     int randomNumber = (int)(Math.random()*100000);
@@ -68,8 +69,20 @@ public class Cam11Steps {
 
     @And("Click Grade Levels first Delete Button")
     public void clickGradeLevelsFirstDeleteButton() {
+
         dg.clickFunction(dg.BankAccountsdeleteButton);
         dg.clickFunction(dg.deleteConfirmButton);
+
+
+        WebElement hamdiTosunDeleteButton = GWD.getDriver().findElement(By.xpath("//td[text()='hamdiTosun']//following::td[5]//div//ms-delete-button"));
+        WebElement hamdiTosunDeleteButton2 = GWD.getDriver().findElement(By.xpath("//td[text()='hamdiTosun']//following::td[5]//div//ms-delete-button//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-warn ng-star-inserted']"));
+
+      //  dg.clickFunction(hamdiTosunDeleteButton2);
+        // dg.clickFunction(dg.BankAccountsdeleteButton);
+         // dg.clickFunction(dg.deleteConfirmButton);
+        //td[text()='hamdiTosun']//following::td[5]//div//ms-delete-button//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-warn ng-star-inserted']
+
+
     }
 
     @And("Verify Grade Levels Delete")
