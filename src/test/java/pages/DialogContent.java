@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.util.List;
 
 import java.time.Duration;
 
@@ -121,81 +122,79 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
     public WebElement editName;
 
+    @FindBy(xpath="//div[@class='mat-select-trigger ng-tns-c76-75']")   //(//*[text()='Stage'])[4]
+    public WebElement stage;
+    @FindBy(xpath="//mat-option[@role='option']")
+    public List<WebElement> stageList;
+
+    @FindBy(xpath="//input[@data-placeholder='Name']")
+    public WebElement docInputName;
+
+    @FindBy(xpath="//span[text()='Stage']")
+    public WebElement docInputStage;
+
+    @FindBy(xpath="//tbody//div[text()=' There is no data to display ']")
+    public WebElement searchDelete;
+
+    @FindBy(xpath="(//button[@mattooltipposition='above'])[3]")
+    public WebElement docDeleteButton;
 
     public WebElement getWebElement(String strButton) {
 
-        switch (strButton) {
-            case "addButton":
-                return addButton;
-            case "saveButton":
-                return saveButton;
-            case "nameInput":
-                return nameInput;
-            case "codeInput":
-                return codeInput;
-            case "integrationCode":
-                return integrationCode;
-            case "priorityCode":
-                return priorityCode;
-            case "toggleBar":
-                return toggleBar;
-            case "academicPeriod":
-                return academicPeriod;
-            case "academicPeriod1":
-                return academicPeriod1;
-            case "gradeLevel":
-                return gradeLevel;
-            case "searchInput":
-                return searchInput;
-            case "shortName":
-                return shortName;
-            case "username":
-                return username;
-            case "password":
-                return password;
-            case "gradeLevel2":
-                return gradeLevel2;
-            case "editButton":
-                return editButton;
-            case "successMessage":
-                return successMessage;
-            case "noDataMessage":
-                return noDataMessage;
-            case "searchButton":
-                return searchButton;
-            case "fieldType":
-                return fieldType;
+            switch (strButton) {
+                case "addButton": return addButton;
+                case "saveButton": return saveButton;
+                case "nameInput": return nameInput;
+                case "codeInput": return codeInput;
+                case "integrationCode": return integrationCode;
+                case "priorityCode": return priorityCode;
+                case "toggleBar": return toggleBar;
+                case "academicPeriod": return academicPeriod;
+                case "academicPeriod1": return academicPeriod1;
+                case "gradeLevel": return gradeLevel;
+                case "searchInput": return searchInput;
+                case "shortName": return shortName;
+                case "username": return username;
+                case "password": return password;
+                case "gradeLevel2": return gradeLevel2;
+                case "editButton": return editButton;
+                case "successMessage": return successMessage;
+                case "noDataMessage": return noDataMessage;
+                case "searchButton": return searchButton;
+                case "fieldType": return fieldType;
 
+            }
+            return null;
         }
-        return null;
-    }
 
-    public void deleteItem(String searchedText) {
-        sendKeysFunction(searchInput, searchedText);
-        clickFunction(searchButton);
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
-        clickFunction(deleteImageButton);
-        clickFunction(deleteDialogButton);
-    }
 
-    public void editItem(String searchedText, String newText) {
-        sendKeysFunction(searchInput, searchedText);
-        WebElement shortNameInput = null;
-        sendKeysFunction(shortNameInput, searchedText);
-        clickFunction(searchButton);
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
-        clickFunction(editButton);
-        sendKeysFunction(nameInput, newText);
-        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.elementToBeClickable(saveButton));
-        clickFunction(saveButton);
-    }
-
-    public void FoundElement(WebElement element) {
-        try {
-            element.click();
-        } catch (Exception e) {
-            System.out.println("Bug: Element not found ");
+        public void deleteItem (String searchedText){
+            sendKeysFunction(searchInput, searchedText);
+            clickFunction(searchButton);
+            wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+            clickFunction(deleteImageButton);
+            clickFunction(deleteDialogButton);
         }
+
+        public void editItem (String searchedText, String newText){
+            sendKeysFunction(searchInput, searchedText);
+            WebElement shortNameInput = null;
+            sendKeysFunction(shortNameInput, searchedText);
+            clickFunction(searchButton);
+            wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+            clickFunction(editButton);
+            sendKeysFunction(nameInput, newText);
+            WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+            wait.until(ExpectedConditions.elementToBeClickable(saveButton));
+            clickFunction(saveButton);
+        }
+
+        public void FoundElement (WebElement element){
+            try {
+                element.click();
+            } catch (Exception e) {
+                System.out.println("Bug: Element not found ");
+            }
+        }
+
     }
-}
