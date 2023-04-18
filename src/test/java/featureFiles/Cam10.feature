@@ -6,7 +6,7 @@ Feature:  Bank Account Setup
     When Enter username and password and click button
     Then User should login successfully
 
-  Scenario:
+  Scenario: Add Bank Account (Positive)
 
     When Click Setup button Parameters Button and Bank Accounts Button
     And Click Bank Accounts Add Button
@@ -14,7 +14,7 @@ Feature:  Bank Account Setup
     And Click Bank Accounts save button
     Then Verify that Element is Visible
 
-  Scenario:
+  Scenario: Add Bank Account (Negative)
 
 
     When Click Setup button Parameters Button and Bank Accounts Button
@@ -23,21 +23,21 @@ Feature:  Bank Account Setup
     And Click Bank Accounts save button
     Then Verify Bank Accounts error
 
-  Scenario:
+  Scenario: Delete Bank Account (Positive)
 
 
     When Click Setup button Parameters Button and Bank Accounts Button
     And Click Bank Accounts DeleteButton
     Then Verify Bank Accounts delete text
 
-  Scenario:
+  Scenario: Delete Bank Account (Negative)
 
 
     When Click Setup button Parameters Button and Bank Accounts Button
     And Re-enter a deleted Bank Accounts data and try to delete it
     Then  Verify that the delete key is not visible
 
-  Scenario:
+  Scenario: Edit BAnk Account
 
 
     When Click Setup button Parameters Button and Bank Accounts Button

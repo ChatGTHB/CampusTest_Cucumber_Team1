@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
+
 public class DialogContent extends Parent {
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
@@ -58,6 +59,64 @@ public class DialogContent extends Parent {
     private WebElement gradeLevel;
     @FindBy(xpath="(//mat-option//span)[2]")
     private WebElement gradeLevel2;
+    @FindBy(xpath = "(//ms-edit-button)[1]")
+    private WebElement editButton;
+    @FindBy(xpath = "//div[text()=' There is no data to display ']")
+    private WebElement noDataMessage;
+    @FindBy(xpath="//div[@id='mat-select-value-5']")
+    public WebElement locationType;
+    @FindBy(xpath="(//button[@mattooltipposition='above'])[2]")
+    public WebElement edit;
+    @FindBy(xpath="//ms-integer-field[@placeholder='GENERAL.FIELD.CAPACITY']/../../../..")
+    public WebElement capacity2;
+    @FindBy(xpath = "//*[contains(text(),'already')]")
+    public WebElement already;
+    @FindBy(xpath="//button[@aria-label='Close dialog']")
+    public WebElement close;
+    @FindBy(xpath = "//tbody//td[text()='Erzurumlu']")
+    public WebElement deletedElement;
+    @FindBy(xpath = " //tbody//td[text()='Oltu']")
+    public WebElement deletedElement2;
+    @FindBy(xpath = "//input[@data-placeholder='IBAN']")
+    public WebElement ibanInput;
+    @FindBy(xpath = "//div[@class='mat-select-arrow ng-tns-c76-76']")
+    public WebElement currencyInput;
+    @FindBy(xpath = "//*[text()='Bank Account successfully created']")
+    public WebElement bankAccountSuccessfulText;
+    @FindBy(xpath = "//span[text()=' EUR ']")
+    public WebElement EURInput;
+    @FindBy(xpath = "//input[@data-placeholder='Integration Code']")
+    public WebElement IntegrationCodeInput;
+    @FindBy(xpath = "//*[contains(text(), 'already exists.')]")
+    public WebElement alreadyExistText;
+    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-warn ng-star-inserted']")
+    public WebElement BankAccountsdeleteButton;
+    @FindBy(xpath = "//span[text()=' Delete ']")
+    public WebElement deleteConfirmButton;
+    @FindBy(xpath = "//*[contains(text(), 'successfully deleted')]")
+    public WebElement bankAccountDeletedText;
+    @FindBy(xpath = "//input[@data-placeholder='Name']")
+    public WebElement searchNameInput;
+    @FindBy(xpath = "//*[text()=' There is no data to display ']")
+    public WebElement noDataToDisplayText;
+    @FindBy(xpath = "(//button[@color='accent'])[2]")
+    public WebElement firstEditButton;
+    @FindBy(xpath = "//*[contains(text(), 'successfully')]")
+    public WebElement successText;
+    @FindBy(xpath = "//input[@data-placeholder='Short Name']")
+    public WebElement shortNameGradeLevel;
+    @FindBy(xpath = "//input[@data-placeholder='Order']")
+    public WebElement orderGradeLevel;
+    @FindBy(xpath = "//input[@data-placeholder='Order']")
+    public WebElement nextGradeSelect;
+    @FindBy(xpath = "//*[text()='None']")
+    public WebElement noneTextGradeLvel;
+    @FindBy(xpath = "//tr[contains(@class , 'mat-row')]/td[2]")
+    public List<WebElement> gradeLevelsIsimler;
+
+
+
+
 
     public WebElement getWebElement(String strButton){
 
@@ -78,11 +137,14 @@ public class DialogContent extends Parent {
             case "username" : return username;
             case "password" : return password;
             case "gradeLevel2" : return gradeLevel2;
+            case "editButton" : return editButton;
+            case "successMessage" : return successMessage;
+            case "noDataMessage" : return noDataMessage;
+            case "searchButton" : return searchButton;
+
         }
         return null;
     }
-
-
     public void deleteItem(String searchedText) {
         sendKeysFunction(searchInput, searchedText);
         clickFunction(searchButton);
@@ -91,7 +153,22 @@ public class DialogContent extends Parent {
         clickFunction(deleteDialogButton);
     }
 
+    public void editItem(String searchedText,String newText) {
+        sendKeysFunction(searchInput, searchedText);
+        clickFunction(searchButton);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+        clickFunction(editButton);
+        sendKeysFunction(nameInput, newText);
+        clickFunction(saveButton);
+    }
 
+    public void FoundElement(WebElement element){
+        try {
+            element.click();
+        }catch (Exception e){
+            System.out.println("Bug: Element not found ");
+        }
+    }
 
 
 
@@ -149,7 +226,6 @@ public class DialogContent extends Parent {
 
 
 
-    /**         cam2              */
 
 
 
@@ -198,7 +274,6 @@ public class DialogContent extends Parent {
 
 
 
-    /**         cam3              */
 
 
 
@@ -248,7 +323,6 @@ public class DialogContent extends Parent {
 
 
 
-/**         cam4              */
 
 
 
@@ -298,7 +372,6 @@ public class DialogContent extends Parent {
 
 
 
-/**         cam5              */
 
 
 
@@ -348,7 +421,6 @@ public class DialogContent extends Parent {
 
 
 
-/**         cam6              */
 
 
 
@@ -398,7 +470,6 @@ public class DialogContent extends Parent {
 
 
 
-/**         cam7              */
 
 
 
@@ -448,7 +519,6 @@ public class DialogContent extends Parent {
 
 
 
-/**         cam8              */
 
 
 
@@ -498,7 +568,6 @@ public class DialogContent extends Parent {
 
 
 
-/**         cam9              */
 
 
 
@@ -548,42 +617,15 @@ public class DialogContent extends Parent {
 
 
 
-/**         cam10              */
 
 
 
-    @FindBy(xpath = "//input[@data-placeholder='IBAN']")
-    public WebElement ibanInput;
 
-    @FindBy(xpath = "//div[@class='mat-select-arrow ng-tns-c76-76']")
-    public WebElement currencyInput;
-    @FindBy(xpath = "//*[text()='Bank Account successfully created']")
-    public WebElement bankAccountSuccessfulText;
-    @FindBy(xpath = "//span[text()=' EUR ']")
-    public WebElement EURInput;
-    @FindBy(xpath = "//input[@data-placeholder='Integration Code']")
-    public WebElement IntegrationCodeInput;
 
-    @FindBy(xpath = "//*[contains(text(), 'already exists.')]")
-    public WebElement alreadyExistText;
 
-    @FindBy(xpath = "//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-warn ng-star-inserted']")
-    public WebElement BankAccountsdeleteButton;
 
-    @FindBy(xpath = "//span[text()=' Delete ']")
-    public WebElement deleteConfirmButton;
 
-    @FindBy(xpath = "//*[contains(text(), 'successfully deleted')]")
-    public WebElement bankAccountDeletedText;
-    @FindBy(xpath = "//input[@data-placeholder='Name']")
-    public WebElement searchNameInput;
-    @FindBy(xpath = "//*[text()=' There is no data to display ']")
-    public WebElement noDataToDisplayText;
 
-    @FindBy(xpath = "(//button[@color='accent'])[2]")
-    public WebElement firstEditButton;
-    @FindBy(xpath = "//*[contains(text(), 'successfully')]")
-    public WebElement successText;
 
 
 
@@ -633,7 +675,6 @@ public class DialogContent extends Parent {
 
 
 
-/**         cam11              */
 
 
 
@@ -683,7 +724,6 @@ public class DialogContent extends Parent {
 
 
 
-/**         cam12              */
 
 
 
@@ -698,40 +738,4 @@ public class DialogContent extends Parent {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**         cam13              */
 }
