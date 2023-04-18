@@ -18,7 +18,6 @@ public class DialogContent extends Parent {
 
     @FindBy(css = "input[formcontrolname='username']")
     public WebElement username;
-
     @FindBy(css = "input[formcontrolname='password']")
     public WebElement password;
     @FindBy(css = "button[aria-label='LOGIN']")
@@ -71,7 +70,6 @@ public class DialogContent extends Parent {
     public WebElement edit;
     @FindBy(xpath = "//ms-integer-field[@placeholder='GENERAL.FIELD.CAPACITY']/../../../..")
     public WebElement capacity2;
-
     @FindBy(xpath = "//*[contains(text(),'already')]")
     public WebElement already;
     @FindBy(xpath = "//button[@aria-label='Close dialog']")
@@ -109,11 +107,9 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//div[@class='mat-select-value ng-tns-c76-73']")
     public WebElement fieldType;
     @FindBy(xpath = "//tbody//div[text()=' There is no data to display ']")
-    public
-    WebElement searchResult;
+    public WebElement searchResult;
     @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.SHORTNAME']/input")
-    public
-    WebElement shortNameInput;
+    public WebElement shortNameInput;
     @FindBy(xpath = "(//*[@data-placeholder='Short Name'])[2]")
     public WebElement editShortName;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
@@ -130,16 +126,12 @@ public class DialogContent extends Parent {
     public WebElement searchDelete;
     @FindBy(xpath="(//button[@mattooltipposition='above'])[3]")
     public WebElement docDeleteButton;
-
     @FindBy(xpath="//div[text()='Attestation successfully created']")
     public WebElement attestationCreationMessage;
-
     @FindBy(xpath="//dynamic-view[@class='ng-star-inserted']/div")
     public WebElement attestationAlreadyExists;
-
     @FindBy(xpath="//div[text()='Attestation successfully updated']")
     public WebElement attestationUpdateSuccess;
-
     @FindBy(xpath="//div[text()='Attestation successfully deleted']")
     public WebElement attestationDeleteSuccess;
 
@@ -170,7 +162,6 @@ public class DialogContent extends Parent {
             return null;
         }
 
-
         public void deleteItem (String searchedText){
             sendKeysFunction(searchInput, searchedText);
             clickFunction(searchButton);
@@ -195,4 +186,5 @@ public class DialogContent extends Parent {
                 System.out.println("Bug: Element not found ");
             }
         }
+
     }
