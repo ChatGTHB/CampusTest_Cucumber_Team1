@@ -1,6 +1,6 @@
 package pages;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import utilities.GWD;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -8,8 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.List;
-
-import java.time.Duration;
 
 
 public class DialogContent extends Parent {
@@ -20,6 +18,7 @@ public class DialogContent extends Parent {
 
     @FindBy(css = "input[formcontrolname='username']")
     public WebElement username;
+
     @FindBy(css = "input[formcontrolname='password']")
     public WebElement password;
     @FindBy(css = "button[aria-label='LOGIN']")
@@ -72,6 +71,7 @@ public class DialogContent extends Parent {
     public WebElement edit;
     @FindBy(xpath = "//ms-integer-field[@placeholder='GENERAL.FIELD.CAPACITY']/../../../..")
     public WebElement capacity2;
+
     @FindBy(xpath = "//*[contains(text(),'already')]")
     public WebElement already;
     @FindBy(xpath = "//button[@aria-label='Close dialog']")
@@ -154,7 +154,6 @@ public class DialogContent extends Parent {
                 case "noDataMessage": return noDataMessage;
                 case "searchButton": return searchButton;
                 case "fieldType": return fieldType;
-
             }
             return null;
         }
@@ -184,5 +183,4 @@ public class DialogContent extends Parent {
                 System.out.println("Bug: Element not found ");
             }
         }
-
     }
