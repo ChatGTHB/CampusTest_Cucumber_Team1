@@ -6,8 +6,6 @@ Feature:  Bank Account Setup
     When Enter username and password and click button
     Then User should login successfully
 
-    Scenario: Deneme sadece
-
 
   Scenario:Add Grade Levels (Positive)
 
@@ -39,5 +37,7 @@ Feature:  Bank Account Setup
     When Click Setup button Parameters Button and Grade Levels Button
     And Re-enter a deleted data and try to delete First Delete Element
     Then Verify that the first delete key is not visible
+
+    Scenario: Edit Grade Levels
 
 

@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import pages.DialogContent;
 import pages.LeftNav;
 import utilities.GWD;
@@ -70,19 +71,8 @@ public class Cam11Steps {
     @And("Click Grade Levels first Delete Button")
     public void clickGradeLevelsFirstDeleteButton() {
 
-        dg.clickFunction(dg.BankAccountsdeleteButton);
+       dg.clickFunction(dg.hamdiTosunDeleteButton);
         dg.clickFunction(dg.deleteConfirmButton);
-
-
-        WebElement hamdiTosunDeleteButton = GWD.getDriver().findElement(By.xpath("//td[text()='hamdiTosun']//following::td[5]//div//ms-delete-button"));
-        WebElement hamdiTosunDeleteButton2 = GWD.getDriver().findElement(By.xpath("//td[text()='hamdiTosun']//following::td[5]//div//ms-delete-button//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-warn ng-star-inserted']"));
-
-      //  dg.clickFunction(hamdiTosunDeleteButton2);
-        // dg.clickFunction(dg.BankAccountsdeleteButton);
-         // dg.clickFunction(dg.deleteConfirmButton);
-        //td[text()='hamdiTosun']//following::td[5]//div//ms-delete-button//button[@class='mat-focus-indicator mat-tooltip-trigger mat-icon-button mat-button-base mat-warn ng-star-inserted']
-
-
     }
 
     @And("Verify Grade Levels Delete")
@@ -93,11 +83,9 @@ public class Cam11Steps {
     @And("Re-enter a deleted data and try to delete First Delete Element")
     public void reEnterADeletedDataAndTryToDeleteFirstDeleteElement() {
 
+        boolean varMI = dg.hamdiTosun.;
 
-
-
-      //  Actions actions = new Actions(GWD.getDriver());
-      //  actions.keyDown(Keys.CONTROL).sendKeys("f").keyUp(Keys.CONTROL).build().perform();
+        Assert.assertFalse(varMI);
 
     }
 

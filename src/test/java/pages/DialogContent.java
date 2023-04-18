@@ -148,6 +148,10 @@ public class DialogContent extends Parent {
     public WebElement noneTextGradeLvel;
     @FindBy(xpath = "//tr[contains(@class , 'mat-row')]/td[2]")
     public List<WebElement> gradeLevelsIsimler;
+    @FindBy(xpath = "//*[text()='hamdiTosun']")
+    public WebElement hamdiTosun;
+    @FindBy(xpath = "//td[text()='hamdiTosun']//following::td[5]//div//ms-delete-button//button")
+    public WebElement hamdiTosunDeleteButton;
 
     public WebElement getWebElement(String strButton){
 
