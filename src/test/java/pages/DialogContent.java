@@ -139,6 +139,18 @@ public class DialogContent extends Parent {
     @FindBy(xpath="(//button[@mattooltipposition='above'])[3]")
     public WebElement docDeleteButton;
 
+    @FindBy(xpath="//div[text()='Attestation successfully created']")
+    public WebElement attestationCreationMessage;
+
+    @FindBy(xpath="//dynamic-view[@class='ng-star-inserted']/div")
+    public WebElement attestationAlreadyExists;
+
+    @FindBy(xpath="//div[text()='Attestation successfully updated']")
+    public WebElement attestationUpdateSuccess;
+
+    @FindBy(xpath="//div[text()='Attestation successfully deleted']")
+    public WebElement attestationDeleteSuccess;
+
     public WebElement getWebElement(String strButton) {
 
             switch (strButton) {
