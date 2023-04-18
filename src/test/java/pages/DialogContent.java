@@ -102,6 +102,13 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//*[contains(text(), 'successfully')]")
     public WebElement successText;
 
+    @FindBy(xpath = "//div[@class='mat-select-value ng-tns-c76-73']")
+    public WebElement fieldType;
+
+
+
+
+
     public WebElement getWebElement(String strButton){
 
         switch (strButton)
@@ -125,6 +132,7 @@ public class DialogContent extends Parent {
             case "successMessage" : return successMessage;
             case "noDataMessage" : return noDataMessage;
             case "searchButton" : return searchButton;
+            case "fieldType" : return fieldType;
 
         }
         return null;
