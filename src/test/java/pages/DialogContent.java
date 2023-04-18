@@ -106,36 +106,28 @@ public class DialogContent extends Parent {
     public WebElement firstEditButton;
     @FindBy(xpath = "//*[contains(text(), 'successfully')]")
     public WebElement successText;
-
     @FindBy(xpath = "//div[@class='mat-select-value ng-tns-c76-73']")
     public WebElement fieldType;
-
     @FindBy(xpath = "//tbody//div[text()=' There is no data to display ']")
     public
     WebElement searchResult;
     @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.SHORTNAME']/input")
     public
     WebElement shortNameInput;
-
     @FindBy(xpath = "(//*[@data-placeholder='Short Name'])[2]")
     public WebElement editShortName;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
     public WebElement editName;
-
     @FindBy(xpath="//div[@class='mat-select-trigger ng-tns-c76-75']")   //(//*[text()='Stage'])[4]
     public WebElement stage;
     @FindBy(xpath="//mat-option[@role='option']")
     public List<WebElement> stageList;
-
     @FindBy(xpath="//input[@data-placeholder='Name']")
     public WebElement docInputName;
-
     @FindBy(xpath="//span[text()='Stage']")
     public WebElement docInputStage;
-
     @FindBy(xpath="//tbody//div[text()=' There is no data to display ']")
     public WebElement searchDelete;
-
     @FindBy(xpath="(//button[@mattooltipposition='above'])[3]")
     public WebElement docDeleteButton;
 
@@ -178,14 +170,10 @@ public class DialogContent extends Parent {
 
         public void editItem (String searchedText, String newText){
             sendKeysFunction(searchInput, searchedText);
-            WebElement shortNameInput = null;
-            sendKeysFunction(shortNameInput, searchedText);
             clickFunction(searchButton);
             wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
             clickFunction(editButton);
             sendKeysFunction(nameInput, newText);
-            WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-            wait.until(ExpectedConditions.elementToBeClickable(saveButton));
             clickFunction(saveButton);
         }
 
