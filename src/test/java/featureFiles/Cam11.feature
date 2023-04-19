@@ -27,7 +27,7 @@ Feature:  Bank Account Setup
   Scenario: Edit Grade Levels
 
     When Click Setup button Parameters Button and Grade Levels Button
-    And Click Edit Button
+    And Click Edit Button Grade Levels
     And Fill the Blanks and save
     And Verify that Editable Element is Visible
 

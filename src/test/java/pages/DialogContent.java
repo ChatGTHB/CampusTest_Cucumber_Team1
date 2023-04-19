@@ -154,6 +154,16 @@ public class DialogContent extends Parent {
     private WebElement discountsIntegrationCodeSearch;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
     private WebElement discountsIntegrationCode;
+    @FindBy(xpath = "//input[@data-placeholder='Short Name']")
+    public WebElement shortNameGradeLevel;
+    @FindBy(xpath = "//input[@data-placeholder='Order']")
+    public WebElement orderGradeLevel;
+    @FindBy(xpath = "//td[text()='hamdiTosun']//following::td[5]//div//ms-delete-button//button")
+    public WebElement hamdiTosunDeleteButton;
+    @FindBy(xpath = "//tr[contains(@class , 'mat-row')]/td[2]")
+    public List<WebElement> gradeLevelsIsimler;
+    @FindBy(xpath = "//td[text()='hamdiTosun']//following::td[5]//div//ms-edit-button//button")
+    public WebElement hamdiTosunEditButton;
 
     public WebElement getWebElement(String strButton) {
 
