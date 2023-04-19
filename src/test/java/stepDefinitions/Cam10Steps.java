@@ -74,6 +74,7 @@ public class Cam10Steps {
         dg.clickFunction(dg.BankAccountsdeleteButton);
         dg.clickFunction(dg.deleteConfirmButton);
 
+        System.out.println("xxxx");
     }
 
     @Then("Verify Bank Accounts delete text")
