@@ -8,9 +8,9 @@ import pages.LeftNav;
 
 public class Cam03Steps {
 
-    LeftNav ln= new LeftNav();
+    LeftNav ln = new LeftNav();
 
-    DialogContent dc= new DialogContent();
+    DialogContent dc = new DialogContent();
 
     @And("Click an attestations menu")
     public void clickAnAttestationsMenu() {
@@ -24,7 +24,7 @@ public class Cam03Steps {
 
     @Then("write a name of the attestation in the dialog box and and then click save button")
     public void writeANameOfTheAttestationInTheDialogBoxAndAndThenClickSaveButton() {
-        dc.sendKeysFunction(dc.nameInput,"attestation de residence");
+        dc.sendKeysFunction(dc.nameInput, "attestation de residence");
         dc.clickFunction(dc.saveButton);
     }
 
@@ -32,19 +32,17 @@ public class Cam03Steps {
     public void verifyTheDisplayOfTheMessageAttestationSuccessfullyCreated() {
         dc.waitUntilVisible(dc.attestationCreationMessage);
         Assert.assertTrue(dc.attestationCreationMessage.isEnabled());
-
     }
 
     @Then("verify the display of the message, The attestation with name  already exists")
     public void verifyTheDisplayOfTheMessageTheAttestationWithNameAlreadyExists() {
         dc.waitUntilVisible(dc.attestationAlreadyExists);
-        dc.verifyContainsTextFunction(dc.attestationAlreadyExists,"already exists");
-
+        dc.verifyContainsTextFunction(dc.attestationAlreadyExists, "already exists");
     }
 
     @And("Click search inbox and type the name of the attestation already added in the first scenario of this feature and click search button")
     public void clickSearchInboxAndTypeTheNameOfTheAttestationAlreadyAddedInTheFirstScenarioOfThisFeatureAndClickSearchButton() {
-        dc.sendKeysFunction(dc.searchInput,"attestation de residence");
+        dc.sendKeysFunction(dc.searchInput, "attestation de residence");
         dc.clickFunction(dc.searchButton);
     }
 
@@ -54,18 +52,18 @@ public class Cam03Steps {
         dc.clickFunction(dc.editButton);
         dc.waitUntilClickable(dc.nameInput);
         dc.nameInput.clear();
-        dc.sendKeysFunction(dc.nameInput,"attestation du travail");
+        dc.sendKeysFunction(dc.nameInput, "attestation du travail");
         dc.clickFunction(dc.saveButton);
     }
 
     @Then("verify the display of message Attestation successfully updated")
     public void verifyTheDisplayOfMessageAttestationSuccessfullyUpdated() {
-        dc.verifyContainsTextFunction(dc.attestationUpdateSuccess,"successfully updated");
+        dc.verifyContainsTextFunction(dc.attestationUpdateSuccess, "successfully updated");
     }
 
     @And("Click search inbox and type the name of the attestation already edited in the third scenario of this feature and click search button")
     public void clickSearchInboxAndTypeTheNameOfTheAttestationAlreadyEditedInTheThirdScenarioOfThisFeatureAndClickSearchButton() {
-        dc.sendKeysFunction(dc.searchInput,"attestation du travail");
+        dc.sendKeysFunction(dc.searchInput, "attestation du travail");
         dc.clickFunction(dc.searchButton);
     }
 
@@ -78,6 +76,6 @@ public class Cam03Steps {
 
     @Then("verify the display message Attestation successfully deleted")
     public void verifyTheDisplayMessageAttestationSuccessfullyDeleted() {
-        dc.verifyContainsTextFunction(dc.attestationDeleteSuccess,"successfully deleted");
+        dc.verifyContainsTextFunction(dc.attestationDeleteSuccess, "successfully deleted");
     }
 }

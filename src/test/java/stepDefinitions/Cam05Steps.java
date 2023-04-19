@@ -21,16 +21,15 @@ public class Cam05Steps {
 
     DialogContent dc = new DialogContent();
 
-    WebDriverWait wait=new WebDriverWait(GWD.getDriver(),
-            Duration.ofSeconds(5));
+    WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(5));
 
     @And("Add name, code and field type")
     public void addNameCodeAndFieldType() {
         dc.sendKeysFunction(dc.nameInput, "diyarbekir");
         dc.sendKeysFunction(dc.codeInput, "99");
 
-        Actions actions=new Actions(GWD.getDriver());
-        Action action=actions.click(dc.fieldType)
+        Actions actions = new Actions(GWD.getDriver());
+        Action action = actions.click(dc.fieldType)
                 .sendKeys(Keys.ENTER)
                 .build();
         action.perform();
@@ -51,7 +50,6 @@ public class Cam05Steps {
         dc.editItem("diyarbekir", "diyarbekirYoluna");
     }
 
-
     @When("Enter the name of the fields you edited in test case three in the name field and press the search button and push delete button")
     public void enterTheNameOfTheFieldsYouEditedInTestCaseThreeInTheNameFieldAndPressTheSearchButtonAndPushDeleteButton() {
         dc.deleteItem("diyarbekirYoluna");
@@ -60,15 +58,13 @@ public class Cam05Steps {
     @When("Enter the name of the fields you edited in test case three in the name field")
     public void enterTheNameOfTheFieldsYouEditedInTestCaseThreeInTheNameField() {
         dc.sendKeysFunction(dc.searchNameInput, "diyarbekirYoluna");
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
 
     }
 
     @Then("There is no data to display message is displayed on the screen")
     public void thereIsNoDataToDisplayMessageIsDisplayedOnTheScreen() {
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*") , 0));
-        dc.verifyContainsTextFunction(dc.getWebElement("noDataMessage"),"no data");
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+        dc.verifyContainsTextFunction(dc.getWebElement("noDataMessage"), "no data");
     }
-
-
 }
