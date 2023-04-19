@@ -30,6 +30,7 @@ public class DialogContent extends Parent {
     public WebElement nameInput;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
     public WebElement codeInput;
+
     @FindBy(xpath = "//ms-save-button/button")
     public WebElement saveButton;
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
@@ -66,10 +67,12 @@ public class DialogContent extends Parent {
     public WebElement noDataMessage;
     @FindBy(xpath = "//div[@id='mat-select-value-5']")
     public WebElement locationType;
+
     @FindBy(xpath = "(//button[@mattooltipposition='above'])[2]")
     public WebElement edit;
     @FindBy(xpath = "//ms-integer-field[@placeholder='GENERAL.FIELD.CAPACITY']/../../../..")
     public WebElement capacity2;
+
     @FindBy(xpath = "//*[contains(text(),'already')]")
     public WebElement already;
     @FindBy(xpath = "//button[@aria-label='Close dialog']")
@@ -114,7 +117,7 @@ public class DialogContent extends Parent {
     public WebElement editShortName;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
     public WebElement editName;
-    @FindBy(xpath="//div[@class='mat-select-trigger ng-tns-c76-75']")   //(//*[text()='Stage'])[4]
+    @FindBy(xpath="//div[@class='mat-select-trigger ng-tns-c76-75']")
     public WebElement stage;
     @FindBy(xpath="//mat-option[@role='option']")
     public List<WebElement> stageList;
@@ -181,7 +184,6 @@ public class DialogContent extends Parent {
             clickFunction(deleteImageButton);
             clickFunction(deleteDialogButton);
         }
-
         public void editItem (String searchedText, String newText){
             sendKeysFunction(searchInput, searchedText);
             clickFunction(searchButton);
@@ -190,7 +192,6 @@ public class DialogContent extends Parent {
             sendKeysFunction(nameInput, newText);
             clickFunction(saveButton);
         }
-
         public void FoundElement (WebElement element){
             try {
                 element.click();
@@ -198,5 +199,4 @@ public class DialogContent extends Parent {
                 System.out.println("Bug: Element not found ");
             }
         }
-
     }

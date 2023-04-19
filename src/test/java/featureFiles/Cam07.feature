@@ -5,7 +5,6 @@ Feature: Cam7
     When Enter username and password and click button
     Then User should login successfully
 
-
   Scenario: Adding Subject Categories (Positive Test)
 
     And Navigate to Subject Categories page

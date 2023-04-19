@@ -23,7 +23,6 @@ import java.util.List;
 
 public class Cam04Steps {
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-
     DialogContent dc = new DialogContent();
     LeftNav ln = new LeftNav();
 
@@ -53,7 +52,6 @@ public class Cam04Steps {
             WebElement element = ln.getWebElement(strButton);
             ln.clickFunction(element);
         }
-
     }
 
     @When("Admin Add New Document Type name as {string} stage as {int}")
@@ -70,12 +68,10 @@ public class Cam04Steps {
     @And("Click save button")
     public void clickSaveButton() {
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
-
         js.executeScript("arguments[0].scrollIntoView(true);", dc.saveButton);
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(dc.saveButton));
         js.executeScript("arguments[0].click();", dc.saveButton);
-
     }
 
     @Then("Document successfully created message should be displayed")
@@ -85,15 +81,12 @@ public class Cam04Steps {
 
     @When("Admin Edit Document name as {string} stage as {int}")
     public void adminEditDocumentNameAsStageAs(String name, int stage) {
-
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
         dc.clickFunction(dc.docInputName);
         dc.sendKeysFunction(dc.docInputName, name);
         dc.clickFunction(dc.docInputStage);
         dc.clickFunction(dc.stageList.get(stage));
-
-
     }
 
     @And("Click Search Button")
@@ -111,9 +104,7 @@ public class Cam04Steps {
     @And("Change document name as {string}")
     public void changeDocumentNameAs(String newname) {
         dc.sendKeysFunction(dc.nameInput, newname);
-
         dc.clickFunction(dc.saveButton);
-
     }
 
     @Then("Document successfully updated message should be displayed")
@@ -137,7 +128,6 @@ public class Cam04Steps {
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
         dc.clickFunction(dc.docDeleteButton);
         dc.clickFunction(dc.deleteDialogButton);
-
     }
 
     @Then("Document successfully deleted message should be displayed")
@@ -164,7 +154,5 @@ public class Cam04Steps {
     public void thereIsNoDataToDisplayMessageShouldBeDisplayed() {
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
         Assert.assertEquals(dc.searchDelete.getText(), "There is no data to display");
-
     }
-
 }

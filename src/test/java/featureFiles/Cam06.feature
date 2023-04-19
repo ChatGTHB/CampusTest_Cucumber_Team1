@@ -5,6 +5,7 @@ Feature:Human Resources  Functionality
     When Enter username and password and click button
     Then User should login successfully
 
+
   Scenario: Adding a new position  (Positive)
     When User navigates to Human the Resources page
     And Click on the Setup option and Positions option

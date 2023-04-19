@@ -17,7 +17,6 @@ import java.time.Duration;
 
 public class Cam06Steps {
 
-
     DialogContent dc = new DialogContent();
     LeftNav ln = new LeftNav();
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
@@ -29,7 +28,6 @@ public class Cam06Steps {
 
     @And("Click on the Setup option and Positions option")
     public void clickOnTheSetupOptionAndPositionsOption() {
-
         ln.clickFunction(ln.setupHR);
         ln.clickFunction(ln.positions);
     }
@@ -41,16 +39,14 @@ public class Cam06Steps {
         dc.sendKeysFunction(dc.shortName, "test");
     }
 
-
     @And("Click Save button")
-    public void clickSaveButton()  {
+    public void clickSaveButton() {
         dc.clickFunction(dc.saveButton);
     }
 
     @Then("System should display success message")
     public void systemShouldDisplaySuccessMessage() {
         dc.verifyContainsTextFunction(dc.successMessage, "successfully");
-
     }
 
     @Then("Already exist message should be displayed on the page")
@@ -60,13 +56,10 @@ public class Cam06Steps {
 
     @And("Enter the necessary information and click on the search button")
     public void enterTheNecessaryInformationAndClickOnTheSearchButton() {
-
         dc.sendKeysFunction(dc.searchInput, "testtechno");
         dc.sendKeysFunction(dc.shortNameInput, "test");
         dc.clickFunction(dc.searchButton);
-       wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
-
-
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
     }
 
     @And("Click the edit button to enter the necessary edit")
@@ -76,7 +69,6 @@ public class Cam06Steps {
         dc.sendKeysFunction(dc.editShortName, "techno");
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
         dc.clickFunction(dc.saveButton);
-
     }
 
     @Then("System should display update message")
@@ -84,9 +76,7 @@ public class Cam06Steps {
         wait.until(ExpectedConditions.elementToBeClickable(dc.successMessage));
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView(false);", dc.successMessage);
-
         js.executeScript("arguments[0].click();", dc.successMessage);
-
         dc.verifyContainsTextFunction(dc.successMessage, "successfully");
     }
 
@@ -102,18 +92,14 @@ public class Cam06Steps {
         dc.sendKeysFunction(dc.searchInput, "technotest");
         dc.sendKeysFunction(dc.shortNameInput, "techno");
         dc.clickFunction(dc.searchButton);
-
     }
 
     @Then("System should display no data message")
     public void systemShouldDisplayNoDataMessage() {
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOf(dc.searchResult));
-
         Assert.assertEquals(dc.searchResult.getText(), "There is no data to display");
     }
-
-
 }
 
 

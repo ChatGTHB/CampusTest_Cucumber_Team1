@@ -5,7 +5,6 @@ Feature: Add- Edit and Delete Functionality for Attestations under Human Resourc
     When Enter username and password and click button
     Then User should login successfully
 
-
   Scenario: Adding an attestation under Human Resources menu(positive test)
     Given User clicks on humanResources
     And selects setup

@@ -5,31 +5,31 @@ Feature:Document Types  Functionality
     When  Enter username and password and click Login Button
     Then Admin should Login succesfully
     And Click on the Document Types
-      | setup      |
-      | parameters |
-      | documentTypes  |
+      | setup         |
+      | parameters    |
+      | documentTypes |
 
 
-    Scenario Outline:Add Document Types
-      When Admin Add New Document Type name as "<name>" stage as <stage>
-      And Click save button
-      Then Document successfully created message should be displayed
+  Scenario Outline:Add Document Types
+    When Admin Add New Document Type name as "<name>" stage as <stage>
+    And Click save button
+    Then Document successfully created message should be displayed
 
-      Examples:
-        |  name    | stage  |
-        | cambrige | 3      |
+    Examples:
+      | name     | stage |
+      | cambrige | 3     |
 
 
   Scenario Outline:Edit Document Type
-        When Admin Edit Document name as "<name>" stage as <stage>
-       And Click Search Button
-        And Click Edit Button
-        And Change document name as "<newname>"
-        Then Document successfully updated message should be displayed
+    When Admin Edit Document name as "<name>" stage as <stage>
+    And Click Search Button
+    And Click Edit Button
+    And Change document name as "<newname>"
+    Then Document successfully updated message should be displayed
 
     Examples:
-      |  name    | stage  | newname     |
-      | cambrige | 4      |  cambrige10 |
+      | name     | stage | newname    |
+      | cambrige | 4     | cambrige10 |
 
 
   Scenario Outline:Delete Document Type  (Positive Test)
@@ -38,7 +38,7 @@ Feature:Document Types  Functionality
     Then Document successfully deleted message should be displayed
 
     Examples:
-      |  name      | stage |
+      | name       | stage |
       | cambrige10 | 4     |
 
   Scenario Outline:Delete Document Type (Negative Test)
@@ -47,8 +47,8 @@ Feature:Document Types  Functionality
     Then There is no data to display message should be displayed
 
     Examples:
-      |  name      |  stage |
-      | cambrige10 |  4     |
+      | name       | stage |
+      | cambrige10 | 4     |
 
 
 
