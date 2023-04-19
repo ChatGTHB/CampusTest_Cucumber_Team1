@@ -63,7 +63,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//ms-edit-button)[1]")
     public WebElement editButton;
     @FindBy(xpath = "//div[text()=' There is no data to display ']")
-    private WebElement noDataMessage;
+    public WebElement noDataMessage;
     @FindBy(xpath = "//div[@id='mat-select-value-5']")
     public WebElement locationType;
     @FindBy(xpath = "(//button[@mattooltipposition='above'])[2]")
@@ -134,6 +134,10 @@ public class DialogContent extends Parent {
     public WebElement attestationUpdateSuccess;
     @FindBy(xpath="//div[text()='Attestation successfully deleted']")
     public WebElement attestationDeleteSuccess;
+    @FindBy(xpath = "//ms-text-field[@id='ms-text-field-0']/input")
+    public WebElement SearchNameInput;
+    @FindBy(xpath = "//ms-text-field[@id='ms-text-field-1']/input")
+    public WebElement SearchCodeInput;
 
     public WebElement getWebElement(String strButton) {
 
@@ -164,6 +168,14 @@ public class DialogContent extends Parent {
 
         public void deleteItem (String searchedText){
             sendKeysFunction(searchInput, searchedText);
+            clickFunction(searchButton);
+            wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+            clickFunction(deleteImageButton);
+            clickFunction(deleteDialogButton);
+        }
+        public void deleteSubjectCategoriesItem(String searchedText, String code) {
+            sendKeysFunction(searchInput, searchedText);
+            sendKeysFunction(SearchCodeInput, code);
             clickFunction(searchButton);
             wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
             clickFunction(deleteImageButton);
