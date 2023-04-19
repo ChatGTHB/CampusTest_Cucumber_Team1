@@ -7,12 +7,12 @@ Feature:School Locations  Functionality
     Then User should login successfully
     And Navigate to setup page
 
-  Scenario: Create School Location
+  Scenario: Create School Location(pozitive)
     When click to  school location
     And  click to Add button and save button
     Then Success message should be displayed
 
-  Scenario: Create School Location 2
+  Scenario: Create School Location(negative)
     When click to  school location
     And click to Add button and save button
     Then Already exist message should be displayed
@@ -22,12 +22,12 @@ Feature:School Locations  Functionality
     And click to Edit button and save button
     Then Success message should be displayed
 
-  Scenario: Delete School Location
+  Scenario: Delete School Location(pozitive)
     When click to  school location
     And click to Delete button
     Then Success message should be displayed
 
-  Scenario: Delete School Location 2
+  Scenario: Delete School Location(negative)
     When click to  school location
     Then Element should not be displayed
 

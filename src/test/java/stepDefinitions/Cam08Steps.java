@@ -84,7 +84,6 @@ public class Cam08Steps {
 
         dc.verifyContainsTextFunction(dc.successMessage, "success");
     }
-
     @And("click to Delete button")
     public void clickToDeleteButton() {
         dc.clickFunction(dc.deleteImageButton);

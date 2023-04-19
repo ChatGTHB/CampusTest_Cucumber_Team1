@@ -142,7 +142,36 @@ public class DialogContent extends Parent {
     public WebElement attestationUpdateSuccess;
     @FindBy(xpath="//div[text()='Attestation successfully deleted']")
     public WebElement attestationDeleteSuccess;
-
+    @FindBy(xpath = "//ms-text-field[@id='ms-text-field-0']/input")
+    public WebElement SearchNameInput;
+    @FindBy(xpath = "//ms-text-field[@id='ms-text-field-1']/input")
+    public WebElement SearchCodeInput;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']/input")
+    private WebElement description;
+    @FindBy(xpath = "//input[@data-placeholder='Description']")
+    private WebElement descriptionSearch;
+    @FindBy(xpath = "//input[@data-placeholder='Integration Code']")
+    private WebElement discountsIntegrationCodeSearch;
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
+    private WebElement discountsIntegrationCode;
+    @FindBy(xpath = "//input[@data-placeholder='Short Name']")
+    public WebElement shortNameGradeLevel;
+    @FindBy(xpath = "//input[@data-placeholder='Order']")
+    public WebElement orderGradeLevel;
+    @FindBy(xpath = "//input[@data-placeholder='Order']")
+    public WebElement nextGradeSelect;
+    @FindBy(xpath = "//*[text()='None']")
+    public WebElement noneTextGradeLvel;
+    @FindBy(xpath = "//tr[contains(@class , 'mat-row')]/td[2]")
+    public List<WebElement> gradeLevelsIsimler;
+    @FindBy(xpath = "//*[text()='hamdiTosun']")
+    public WebElement hamdiTosun;
+    @FindBy(xpath = "//td[text()='hamdiTosun']//following::td[5]//div//ms-delete-button//button")
+    public WebElement hamdiTosunDeleteButton;
+    @FindBy(xpath = "//td[text()='hamdiTosun']//following::td[5]//div//ms-edit-button//button")
+    public WebElement hamdiTosunEditButton;
+    
+    
     public WebElement getWebElement(String strButton) {
 
             switch (strButton) {
