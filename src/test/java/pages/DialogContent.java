@@ -156,7 +156,7 @@ public class DialogContent extends Parent {
     private WebElement discountsIntegrationCode;
 
 
-        @FindBy(xpath = "//input[@data-placeholder='Short Name']")
+    @FindBy(xpath = "//input[@data-placeholder='Short Name']")
     public WebElement shortNameGradeLevel;
     @FindBy(xpath = "//input[@data-placeholder='Order']")
     public WebElement orderGradeLevel;
