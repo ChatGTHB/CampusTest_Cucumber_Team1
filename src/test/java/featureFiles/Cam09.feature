@@ -7,12 +7,12 @@ Feature:School Departments  Functionality
     Then User should login successfully
     And Navigate to setup page
 
-  Scenario: Create Departments
+  Scenario: Create Departments (pozitive)
     When click to  departments
     And click  Add button  and save button
     Then Success message  should be displayed
 
-  Scenario: Create Departments 2
+  Scenario: Create Departments (negative)
     When click to  departments
     And click  Add button  and save button
     Then Already exist  message should be displayed
@@ -22,12 +22,12 @@ Feature:School Departments  Functionality
     And click  Edit  button and save button
     Then Success message should be displayed
 
-  Scenario: Delete to Departments
+  Scenario: Delete to Departments (pozitive)
     When click to  departments
     And click Delete button
     Then Success message should be displayed
 
-  Scenario: Delete to Departments 2
+  Scenario: Delete to Departments (negative)
     When click to  departments
     Then Element should not displayed
 
