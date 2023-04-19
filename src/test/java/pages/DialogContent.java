@@ -142,6 +142,22 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-text-field[@id='ms-text-field-1']/input")
     public WebElement SearchCodeInput;
 
+
+
+
+
+
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']/input")
+    private WebElement description;
+    @FindBy(xpath = "//input[@data-placeholder='Description']")
+    private WebElement descriptionSearch;
+    @FindBy(xpath = "//input[@data-placeholder='Integration Code']")
+    private WebElement discountsIntegrationCodeSearch;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
+    private WebElement discountsIntegrationCode;
+
     public WebElement getWebElement(String strButton) {
 
             switch (strButton) {
@@ -165,6 +181,25 @@ public class DialogContent extends Parent {
                 case "noDataMessage": return noDataMessage;
                 case "searchButton": return searchButton;
                 case "fieldType": return fieldType;
+
+
+
+
+
+
+
+
+
+                case "description":
+                    return description;
+                case "discountsIntegrationCode":
+                    return discountsIntegrationCode;
+                case "descriptionSearch":
+                    return descriptionSearch;
+                case "discountsIntegrationCodeSearch":
+                    return discountsIntegrationCodeSearch;
+
+
             }
             return null;
         }
@@ -199,4 +234,13 @@ public class DialogContent extends Parent {
                 System.out.println("Bug: Element not found ");
             }
         }
+
+    public void deleteInput(String descriptionInput) {
+        sendKeysFunction(descriptionSearch, descriptionInput);
+        clickFunction(searchButton);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+        clickFunction(deleteImageButton);
+        clickFunction(deleteDialogButton);
+    }
+
     }
