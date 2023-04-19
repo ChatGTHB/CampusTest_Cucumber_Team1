@@ -1,6 +1,5 @@
 Feature:  Bank Account Setup
 
-
   Background:
     Given Navigate to Campus
     When Enter username and password and click button

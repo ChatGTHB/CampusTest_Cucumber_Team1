@@ -34,9 +34,6 @@ public class Cam11Steps {
         dg.sendKeysFunction(dg.nameInput, userNAme);
         dg.sendKeysFunction(dg.shortNameGradeLevel, userNAme);
         dg.sendKeysFunction(dg.orderGradeLevel, "2");
-
-
-
     }
 
     @And("Click Grade Levels save button")
@@ -54,7 +51,6 @@ public class Cam11Steps {
         dg.sendKeysFunction(dg.nameInput, userNAme);
         dg.sendKeysFunction(dg.shortNameGradeLevel, userNAme);
         dg.sendKeysFunction(dg.orderGradeLevel, "2");
-
     }
 
     @Then("Verify that Grade Levels error text")
@@ -64,7 +60,6 @@ public class Cam11Steps {
 
     @And("Click Grade Levels first Delete Button")
     public void clickGradeLevelsFirstDeleteButton() {
-
         dg.clickFunction(dg.hamdiTosunDeleteButton);
         dg.clickFunction(dg.deleteConfirmButton);
     }
@@ -84,8 +79,6 @@ public class Cam11Steps {
             }
         }
         Assert.assertFalse(varMI);
-
-
     }
 
     @Then("Verify that the first delete key is not visible")
@@ -107,5 +100,4 @@ public class Cam11Steps {
     public void verifyThatEditableElementIsVisible() {
         dg.verifyContainsTextFunction(dg.successMessage,"successfully");
     }
-
 }

@@ -263,5 +263,4 @@ public class DialogContent extends Parent {
             System.out.println("Bug: Element not found ");
         }
     }
-
 }

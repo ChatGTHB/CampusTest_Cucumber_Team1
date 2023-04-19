@@ -41,6 +41,7 @@ Feature:Document Types  Functionality
       | name       | stage |
       | cambrige10 | 4     |
 
+
   Scenario Outline:Delete Document Type (Negative Test)
     When Admin again Delete Document name as "<name>" stage as <stage>
     And Click Search button on Page

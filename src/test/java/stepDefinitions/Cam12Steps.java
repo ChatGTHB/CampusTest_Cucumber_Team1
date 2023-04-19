@@ -37,6 +37,4 @@ public class Cam12Steps {
         dc.clickFunction(dc.saveButton);
 
     }
-
-
 }
