@@ -69,7 +69,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//ms-edit-button)[1]")
     public WebElement editButton;
     @FindBy(xpath = "//div[text()=' There is no data to display ']")
-    public WebElement noDataMessage;
+    private WebElement noDataMessage;
     @FindBy(xpath = "//div[@id='mat-select-value-5']")
     public WebElement locationType;
 
@@ -122,135 +122,77 @@ public class DialogContent extends Parent {
     public WebElement editShortName;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
     public WebElement editName;
-    @FindBy(xpath = "//div[@class='mat-select-trigger ng-tns-c76-75']")
+    @FindBy(xpath="//div[@class='mat-select-trigger ng-tns-c76-75']")   //(//*[text()='Stage'])[4]
     public WebElement stage;
-    @FindBy(xpath = "//mat-option[@role='option']")
+    @FindBy(xpath="//mat-option[@role='option']")
     public List<WebElement> stageList;
-    @FindBy(xpath = "//input[@data-placeholder='Name']")
+    @FindBy(xpath="//input[@data-placeholder='Name']")
     public WebElement docInputName;
-    @FindBy(xpath = "//span[text()='Stage']")
+    @FindBy(xpath="//span[text()='Stage']")
     public WebElement docInputStage;
-    @FindBy(xpath = "//tbody//div[text()=' There is no data to display ']")
+    @FindBy(xpath="//tbody//div[text()=' There is no data to display ']")
     public WebElement searchDelete;
-    @FindBy(xpath = "(//button[@mattooltipposition='above'])[3]")
+    @FindBy(xpath="(//button[@mattooltipposition='above'])[3]")
     public WebElement docDeleteButton;
-    @FindBy(xpath = "//div[text()='Attestation successfully created']")
+    @FindBy(xpath="//div[text()='Attestation successfully created']")
     public WebElement attestationCreationMessage;
-    @FindBy(xpath = "//dynamic-view[@class='ng-star-inserted']/div")
+    @FindBy(xpath="//dynamic-view[@class='ng-star-inserted']/div")
     public WebElement attestationAlreadyExists;
-    @FindBy(xpath = "//div[text()='Attestation successfully updated']")
+    @FindBy(xpath="//div[text()='Attestation successfully updated']")
     public WebElement attestationUpdateSuccess;
-    @FindBy(xpath = "//div[text()='Attestation successfully deleted']")
+    @FindBy(xpath="//div[text()='Attestation successfully deleted']")
     public WebElement attestationDeleteSuccess;
-    @FindBy(xpath = "//ms-text-field[@id='ms-text-field-0']/input")
-    public WebElement SearchNameInput;
-    @FindBy(xpath = "//ms-text-field[@id='ms-text-field-1']/input")
-    public WebElement SearchCodeInput;
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']/input")
-    private WebElement description;
-    @FindBy(xpath = "//input[@data-placeholder='Description']")
-    private WebElement descriptionSearch;
-    @FindBy(xpath = "//input[@data-placeholder='Integration Code']")
-    private WebElement discountsIntegrationCodeSearch;
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
-    private WebElement discountsIntegrationCode;
 
     public WebElement getWebElement(String strButton) {
 
-        switch (strButton) {
-            case "addButton":
-                return addButton;
-            case "saveButton":
-                return saveButton;
-            case "nameInput":
-                return nameInput;
-            case "codeInput":
-                return codeInput;
-            case "integrationCode":
-                return integrationCode;
-            case "priorityCode":
-                return priorityCode;
-            case "toggleBar":
-                return toggleBar;
-            case "academicPeriod":
-                return academicPeriod;
-            case "academicPeriod1":
-                return academicPeriod1;
-            case "gradeLevel":
-                return gradeLevel;
-            case "searchInput":
-                return searchInput;
-            case "shortName":
-                return shortName;
-            case "username":
-                return username;
-            case "password":
-                return password;
-            case "gradeLevel2":
-                return gradeLevel2;
-            case "editButton":
-                return editButton;
-            case "successMessage":
-                return successMessage;
-            case "noDataMessage":
-                return noDataMessage;
-            case "searchButton":
-                return searchButton;
-            case "fieldType":
-                return fieldType;
-            case "description":
-                return description;
-            case "discountsIntegrationCode":
-                return discountsIntegrationCode;
-            case "descriptionSearch":
-                return descriptionSearch;
-            case "discountsIntegrationCodeSearch":
-                return discountsIntegrationCodeSearch;
-            case "alreadyExist":
-                return alreadyExist;
+            switch (strButton) {
+                case "addButton": return addButton;
+                case "saveButton": return saveButton;
+                case "nameInput": return nameInput;
+                case "codeInput": return codeInput;
+                case "integrationCode": return integrationCode;
+                case "priorityCode": return priorityCode;
+                case "toggleBar": return toggleBar;
+                case "academicPeriod": return academicPeriod;
+                case "academicPeriod1": return academicPeriod1;
+                case "gradeLevel": return gradeLevel;
+                case "searchInput": return searchInput;
+                case "shortName": return shortName;
+                case "username": return username;
+                case "password": return password;
+                case "gradeLevel2": return gradeLevel2;
+                case "editButton": return editButton;
+                case "successMessage": return successMessage;
+                case "noDataMessage": return noDataMessage;
+                case "searchButton": return searchButton;
+                case "fieldType": return fieldType;
+            }
+            return null;
         }
-        return null;
-    }
 
-    public void deleteItem(String searchedText) {
-        sendKeysFunction(searchInput, searchedText);
-        clickFunction(searchButton);
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
-        clickFunction(deleteImageButton);
-        clickFunction(deleteDialogButton);
-    }
-
-    public void deleteSubjectCategoriesItem(String searchedText, String code) {
-        sendKeysFunction(searchInput, searchedText);
-        sendKeysFunction(SearchCodeInput, code);
-        clickFunction(searchButton);
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
-        clickFunction(deleteImageButton);
-        clickFunction(deleteDialogButton);
-    }
-
-    public void deleteInput(String descriptionInput) {
-        sendKeysFunction(descriptionSearch, descriptionInput);
-        clickFunction(searchButton);
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
-        clickFunction(deleteImageButton);
-        clickFunction(deleteDialogButton);
-    }
-
-    public void editItem(String searchedText, String newText) {
-        sendKeysFunction(searchInput, searchedText);
-        clickFunction(searchButton);
-        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
-        clickFunction(editButton);
-        sendKeysFunction(nameInput, newText);
-        clickFunction(saveButton);
-    }
-
-    public void FoundElement(WebElement element) {
-        try {
-            element.click();
-        } catch (Exception e) {
-            System.out.println("Bug: Element not found ");
+        public void deleteItem (String searchedText){
+            sendKeysFunction(searchInput, searchedText);
+            clickFunction(searchButton);
+            wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+            clickFunction(deleteImageButton);
+            clickFunction(deleteDialogButton);
         }
+
+        public void editItem (String searchedText, String newText){
+            sendKeysFunction(searchInput, searchedText);
+            clickFunction(searchButton);
+            wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
+            clickFunction(editButton);
+            sendKeysFunction(nameInput, newText);
+            clickFunction(saveButton);
+        }
+
+        public void FoundElement (WebElement element){
+            try {
+                element.click();
+            } catch (Exception e) {
+                System.out.println("Bug: Element not found ");
+            }
+        }
+
     }
-}
