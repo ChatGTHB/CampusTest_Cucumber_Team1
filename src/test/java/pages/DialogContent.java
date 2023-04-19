@@ -19,14 +19,17 @@ public class DialogContent extends Parent {
 
     @FindBy(css = "input[formcontrolname='username']")
     public WebElement username;
+
     @FindBy(css = "input[formcontrolname='password']")
     public WebElement password;
     @FindBy(css = "button[aria-label='LOGIN']")
     public WebElement loginButton;
     @FindBy(css = "span[class='mat-tooltip-trigger logo-text']")
     public WebElement textTechnoStudy;
+
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'ADD')]//button")
     public WebElement addButton;
+
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
     public WebElement nameInput;
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
@@ -42,6 +45,7 @@ public class DialogContent extends Parent {
     public WebElement alreadyExist;
     @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Name']")
     public WebElement searchInput;
+
     @FindBy(xpath = "//ms-search-button//button")
     public WebElement searchButton;
     @FindBy(xpath = "(//ms-delete-button//button)[1]")
@@ -142,15 +146,12 @@ public class DialogContent extends Parent {
     public WebElement SearchNameInput;
     @FindBy(xpath = "//ms-text-field[@id='ms-text-field-1']/input")
     public WebElement SearchCodeInput;
-
-
     @FindBy(xpath = "//ms-text-field[@formcontrolname='description']/input")
     private WebElement description;
     @FindBy(xpath = "//input[@data-placeholder='Description']")
     private WebElement descriptionSearch;
     @FindBy(xpath = "//input[@data-placeholder='Integration Code']")
     private WebElement discountsIntegrationCodeSearch;
-
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
     private WebElement discountsIntegrationCode;
 
@@ -250,5 +251,4 @@ public class DialogContent extends Parent {
             System.out.println("Bug: Element not found ");
         }
     }
-
 }
