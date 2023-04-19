@@ -206,14 +206,8 @@ public class DialogContent extends Parent {
                 return descriptionSearch;
             case "discountsIntegrationCodeSearch":
                 return discountsIntegrationCodeSearch;
-
-
-
-            case "alreadyExistText":
-                return alreadyExistText;
-
-
-
+            case "alreadyExist":
+                return alreadyExist;
         }
         return null;
     }
