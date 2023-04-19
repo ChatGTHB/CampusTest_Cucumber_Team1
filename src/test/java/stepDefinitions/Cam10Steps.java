@@ -7,15 +7,15 @@ import pages.LeftNav;
 
 public class Cam10Steps {
 
-
     LeftNav ln = new LeftNav();
     DialogContent dg = new DialogContent();
 
-    String userNAme= "Hamdi1";
+    String userNAme = "Hamdi1";
     String iBan = "19283746";
 
-    int randomNumber = (int)(Math.random()*100000);
+    int randomNumber = (int) (Math.random() * 100000);
     String rndmNumber = String.valueOf(randomNumber);
+
     @When("Click Setup button Parameters Button and Bank Accounts Button")
     public void clickSetupButtonParametersButtonAndBankAccountsButton() {
         ln.clickFunction(ln.setup);
@@ -26,17 +26,15 @@ public class Cam10Steps {
     @And("Click Bank Accounts Add Button")
     public void clickBankAccountsAddButton() {
         dg.clickFunction(dg.addButton);
-
     }
 
     @And("Fill the Bank Accounts Blanks")
     public void fillTheBankAccountsBlanks() {
-        dg.sendKeysFunction(dg.nameInput,userNAme);
-        dg.sendKeysFunction(dg.ibanInput,iBan);
+        dg.sendKeysFunction(dg.nameInput, userNAme);
+        dg.sendKeysFunction(dg.ibanInput, iBan);
         dg.clickFunction(dg.currencyInput);
         dg.clickFunction(dg.EURInput);
-        dg.sendKeysFunction(dg.IntegrationCodeInput,"52393");
-
+        dg.sendKeysFunction(dg.IntegrationCodeInput, "52393");
     }
 
     @And("Click Bank Accounts save button")
@@ -46,25 +44,21 @@ public class Cam10Steps {
 
     @Then("Verify that Element is Visible")
     public void verifyThatElementIsVisible() {
-        dg.verifyContainsTextFunction(dg.bankAccountSuccessfulText,"successfully");
-
+        dg.verifyContainsTextFunction(dg.bankAccountSuccessfulText, "successfully");
     }
 
     @And("Fill the Add Blanks with same Data")
     public void fillTheAddBlanksWithSameData() {
-
-        dg.sendKeysFunction(dg.nameInput,userNAme);
-        dg.sendKeysFunction(dg.ibanInput,iBan);
+        dg.sendKeysFunction(dg.nameInput, userNAme);
+        dg.sendKeysFunction(dg.ibanInput, iBan);
         dg.clickFunction(dg.currencyInput);
         dg.clickFunction(dg.EURInput);
-        dg.sendKeysFunction(dg.IntegrationCodeInput,"52393");
-
+        dg.sendKeysFunction(dg.IntegrationCodeInput, "52393");
     }
 
     @Then("Verify Bank Accounts error")
     public void verifyBankAccountsError() {
-
-        dg.verifyContainsTextFunction(dg.alreadyExist,"already exists");
+        dg.verifyContainsTextFunction(dg.alreadyExist, "already exists");
     }
 
     @And("Click Bank Accounts DeleteButton")
@@ -73,44 +67,37 @@ public class Cam10Steps {
         dg.clickFunction(dg.searchButton);
         dg.clickFunction(dg.BankAccountsdeleteButton);
         dg.clickFunction(dg.deleteConfirmButton);
-
-        System.out.println("xxxx");
     }
 
     @Then("Verify Bank Accounts delete text")
     public void verifyBankAccountsDeleteText() {
         dg.verifyContainsTextFunction(dg.bankAccountDeletedText, "successfully deleted");
-
     }
 
     @And("Re-enter a deleted Bank Accounts data and try to delete it")
     public void reEnterADeletedBankAccountsDataAndTryToDeleteIt() {
         dg.sendKeysFunction(dg.searchNameInput, userNAme);
         dg.clickFunction(dg.searchButton);
-
     }
 
     @Then("Verify that the delete key is not visible")
     public void verifyThatTheDeleteKeyIsNotVisible() {
-        dg.verifyContainsTextFunction(dg.noDataToDisplayText,"no data");
+        dg.verifyContainsTextFunction(dg.noDataToDisplayText, "no data");
     }
 
     @And("Click Bank Accounts Edit Button")
     public void clickBankAccountsEditButton() {
         dg.clickFunction(dg.firstEditButton);
-
-
-
     }
 
     @And("Fill the Edit Blanks and save")
     public void fillTheEditBlanksAndSave() {
-        dg.sendKeysFunction(dg.ibanInput,rndmNumber);
+        dg.sendKeysFunction(dg.ibanInput, rndmNumber);
         dg.clickFunction(dg.saveButton);
     }
 
     @Then("Verify that Edit Element is Visible")
     public void verifyThatEditElementIsVisible() {
-        dg.verifyContainsTextFunction(dg.successText,"successfully");
+        dg.verifyContainsTextFunction(dg.successText, "successfully");
     }
 }

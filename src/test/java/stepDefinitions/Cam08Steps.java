@@ -15,7 +15,8 @@ import java.time.Duration;
 
 public class Cam08Steps {
     DialogContent dc = new DialogContent();
-    LeftNav ln=new LeftNav();
+    LeftNav ln = new LeftNav();
+
     @And("Navigate to  setup page")
     public void navigateToSetupPage() {
         ln.clickFunction(ln.setup);
@@ -30,8 +31,8 @@ public class Cam08Steps {
     @And("click to Add button and save button")
     public void clickToAddButtonAndSaveButton() {
         dc.clickFunction(dc.addButton);
-        dc.sendKeysFunction(dc.nameInput,"Erzurum");
-        dc.sendKeysFunction(dc.shortName,"25");
+        dc.sendKeysFunction(dc.nameInput, "Erzurum");
+        dc.sendKeysFunction(dc.shortName, "25");
         Actions aksiyonlar = new Actions(GWD.getDriver());
         Action aksiyon = aksiyonlar.click(dc.locationType).
                 sendKeys(Keys.DOWN).
@@ -51,50 +52,48 @@ public class Cam08Steps {
                 build();
         aksiyon.perform();
 
-
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
 
         js.executeScript("arguments[0].scrollIntoView(true);", dc.saveButton);
-        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(dc.saveButton));
         js.executeScript("arguments[0].click();", dc.saveButton);
     }
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-        dc.verifyContainsTextFunction(dc.successMessage,"success");
+        dc.verifyContainsTextFunction(dc.successMessage, "success");
     }
 
     @Then("Already exist message should be displayed")
     public void alreadyExistMessageShouldBeDisplayed() {
         dc.clickFunction(dc.close);
-        dc.verifyContainsTextFunction(dc.alreadyExist,"already");
+        dc.verifyContainsTextFunction(dc.alreadyExist, "already");
     }
 
     @And("click to Edit button and save button")
     public void clickToEditButtonAndSaveButton() {
         dc.clickFunction(dc.edit);
-        dc.sendKeysFunction(dc.nameInput,"Erzurumlu");
+        dc.sendKeysFunction(dc.nameInput, "Erzurumlu");
 
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
-
         js.executeScript("arguments[0].scrollIntoView(true);", dc.saveButton);
-        WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(dc.saveButton));
         js.executeScript("arguments[0].click();", dc.saveButton);
 
-        dc.verifyContainsTextFunction(dc.successMessage,"success");
+        dc.verifyContainsTextFunction(dc.successMessage, "success");
     }
 
     @And("click to Delete button")
     public void clickToDeleteButton() {
         dc.clickFunction(dc.deleteImageButton);
         dc.clickFunction(dc.deleteDialogButton);
-        dc.verifyContainsTextFunction(dc.successMessage,"success");
+        dc.verifyContainsTextFunction(dc.successMessage, "success");
     }
 
     @Then("Element should not be displayed")
     public void elementShouldNotBeDisplayed() {
-           dc.FoundElement(dc.deletedElement);
+        dc.FoundElement(dc.deletedElement);
     }
 }

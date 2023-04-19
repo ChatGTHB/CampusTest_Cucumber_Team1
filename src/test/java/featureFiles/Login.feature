@@ -1,6 +1,5 @@
 Feature: Login Functionality
 
-
   Scenario: Login Functionality
 
     Given Navigate to Campus
