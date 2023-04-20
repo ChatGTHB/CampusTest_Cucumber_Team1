@@ -42,6 +42,6 @@ Feature: Human Resources Setup
     And Selects setup
     And Clicks on position categories
     And Enter the category position will be delete
-    And Clicks on search button
+    And Clicks on search button at position categories
     Then There is no data to display message is displayed
 
