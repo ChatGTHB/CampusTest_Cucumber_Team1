@@ -76,8 +76,8 @@ public class Cam02Steps {
         dc.sendKeysFunction(dc.getWebElement("searchInput"), "Business Analyst");
     }
 
-    @And("Clicks on search button")
-    public void clicksOnSearchButton() {
+    @And("Clicks on search button at position categories")
+    public void clicksOnSearchButtonAtPositionCategories() {
         dc.clickFunction(dc.getWebElement("searchButton"));
     }
 
