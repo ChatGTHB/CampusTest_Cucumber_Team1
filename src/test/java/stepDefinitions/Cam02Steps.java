@@ -16,27 +16,27 @@ public class Cam02Steps {
         ln.clickFunction(ln.getWebElement("humanResources"));
     }
 
-    @And("selects setup")
+    @And("Selects setup")
     public void selectsSetup() {
         ln.clickFunction(ln.getWebElement("setupHumanResources"));
     }
 
-    @And("clicks on position categories")
+    @And("Clicks on position categories")
     public void clicksOnPositionCategories() {
         ln.clickFunction(ln.getWebElement("positionCategories"));
     }
 
-    @And("clicks on add position categories")
+    @And("Clicks on add position categories")
     public void clicksOnAddPositionCategories() {
         dc.clickFunction(dc.getWebElement("addButton"));
     }
 
-    @And("enters position category")
+    @And("Enters position category")
     public void entersPositionCategory() {
         dc.sendKeysFunction(dc.getWebElement("nameInput"), "Scrum Master");
     }
 
-    @And("clicks on save button")
+    @And("Clicks on save button")
     public void clicksOnSaveButton() {
         dc.clickFunction(dc.getWebElement("saveButton"));
     }
@@ -51,7 +51,7 @@ public class Cam02Steps {
         dc.verifyContainsTextFunction(dc.alreadyExist, "already exist");
     }
 
-    @And("edit the position category")
+    @And("Edit the position category")
     public void editThePositionCategory() {
         dc.editItem("Scrum Master", "Business Analyst");
     }
@@ -61,7 +61,7 @@ public class Cam02Steps {
         dc.verifyContainsTextFunction(dc.getWebElement("successMessage"), "success");
     }
 
-    @And("delete the position category")
+    @And("Delete the position category")
     public void deleteThePositionCategory() {
         dc.deleteItem("Business Analyst");
     }
@@ -71,12 +71,12 @@ public class Cam02Steps {
         dc.verifyContainsTextFunction(dc.getWebElement("successMessage"), "success");
     }
 
-    @And("enter the category position will be delete")
+    @And("Enter the category position will be delete")
     public void enterTheCategoryPositionWillBeDelete() {
         dc.sendKeysFunction(dc.getWebElement("searchInput"), "Business Analyst");
     }
 
-    @And("clicks on search button")
+    @And("Clicks on search button")
     public void clicksOnSearchButton() {
         dc.clickFunction(dc.getWebElement("searchButton"));
     }
