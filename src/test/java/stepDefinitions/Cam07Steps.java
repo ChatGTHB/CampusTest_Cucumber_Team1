@@ -56,7 +56,7 @@ public class Cam07Steps {
 
     @Then("Subject Categories successfully updated message is displayed")
     public void SubjectCategoriesSuccessfullyUpdatedMessageIsDisplayed() {
-        dc.verifyContainsTextFunction(dc.getWebElement("success"), "success");
+        dc.verifyContainsTextFunction(dc.getWebElement("successMessage"), "success");
     }
 
     @When("Admin delete an Subject Categories")
