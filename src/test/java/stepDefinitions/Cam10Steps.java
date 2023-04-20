@@ -64,6 +64,11 @@ public class Cam10Steps {
     public void clickBankAccountsDeleteButton() {
         dg.sendKeysFunction(dg.searchNameInput, userNAme);
         dg.clickFunction(dg.searchButton);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         dg.clickFunction(dg.BankAccountsdeleteButton);
         dg.clickFunction(dg.deleteConfirmButton);
     }
