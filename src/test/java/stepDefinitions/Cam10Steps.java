@@ -1,8 +1,14 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.DialogContent;
 import pages.LeftNav;
+import utilities.GWD;
+
+import java.time.Duration;
 
 public class Cam10Steps {
 
@@ -62,13 +68,10 @@ public class Cam10Steps {
 
     @And("Click Bank Accounts DeleteButton")
     public void clickBankAccountsDeleteButton() {
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(),Duration.ofSeconds(20));
         dg.sendKeysFunction(dg.searchNameInput, userNAme);
         dg.clickFunction(dg.searchButton);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
         dg.clickFunction(dg.BankAccountsdeleteButton);
         dg.clickFunction(dg.deleteConfirmButton);
     }
