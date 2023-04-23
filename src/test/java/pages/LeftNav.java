@@ -63,7 +63,6 @@ public class LeftNav extends Parent {
     public WebElement discounts;
     @FindBy(xpath = "//span[text()='Grade Levels']")
     public WebElement gradeLevels;
-
     public WebElement getWebElement(String strButton) {
 
         switch (strButton) {

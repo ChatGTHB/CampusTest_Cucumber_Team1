@@ -1,17 +1,20 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.DialogContent;
 import pages.LeftNav;
+import utilities.GWD;
+
+import java.time.Duration;
 
 public class Cam10Steps {
-
     LeftNav ln = new LeftNav();
     DialogContent dg = new DialogContent();
-
     String userNAme = "Hamdi1";
     String iBan = "19283746";
-
     int randomNumber = (int) (Math.random() * 100000);
     String rndmNumber = String.valueOf(randomNumber);
 
@@ -62,8 +65,10 @@ public class Cam10Steps {
 
     @And("Click Bank Accounts DeleteButton")
     public void clickBankAccountsDeleteButton() {
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(),Duration.ofSeconds(20));
         dg.sendKeysFunction(dg.searchNameInput, userNAme);
         dg.clickFunction(dg.searchButton);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
         dg.clickFunction(dg.BankAccountsdeleteButton);
         dg.clickFunction(dg.deleteConfirmButton);
     }

@@ -9,7 +9,6 @@ Feature: Discount Functionality
       | parameters |
       | discounts  |
 
-
   Scenario Outline: Discounts Add Feature (Positive Test)
     Then Click on the element in Dialog
       | addButton |

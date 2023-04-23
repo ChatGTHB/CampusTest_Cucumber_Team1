@@ -35,6 +35,5 @@ public class Cam12Steps {
         wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"), 0));
         dc.clickFunction(dc.getWebElement("toggleBar"));
         dc.clickFunction(dc.saveButton);
-
     }
 }

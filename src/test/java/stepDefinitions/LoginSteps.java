@@ -5,7 +5,6 @@ import pages.DialogContent;
 import utilities.GWD;
 
 public class LoginSteps {
-
     DialogContent dc = new DialogContent();
 
     @Given("Navigate to Campus")
