@@ -11,13 +11,10 @@ import utilities.GWD;
 import java.time.Duration;
 
 public class Cam10Steps {
-
     LeftNav ln = new LeftNav();
     DialogContent dg = new DialogContent();
-
     String userNAme = "Hamdi1";
     String iBan = "19283746";
-
     int randomNumber = (int) (Math.random() * 100000);
     String rndmNumber = String.valueOf(randomNumber);
 
