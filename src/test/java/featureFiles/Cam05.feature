@@ -1,7 +1,6 @@
 Feature: Add-Edit-Delete Fields under Parameters under Setup Functionality
 
   Background:
-
     Given Navigate to Campus
     When Enter username and password and click button
     Then User should login successfully
@@ -10,9 +9,7 @@ Feature: Add-Edit-Delete Fields under Parameters under Setup Functionality
       | parameters |
       | fields     |
 
-
   Scenario: Add Fields (Positive)
-
     And Click on the element in Dialog
       | addButton |
     And Add name, code and field type
@@ -20,9 +17,7 @@ Feature: Add-Edit-Delete Fields under Parameters under Setup Functionality
       | saveButton |
     Then Success message should be displayed on the screen
 
-
   Scenario: Add Fields (Negative)
-
     And Click on the element in Dialog
       | addButton |
     And Add name, code and field type
@@ -30,21 +25,15 @@ Feature: Add-Edit-Delete Fields under Parameters under Setup Functionality
       | saveButton |
     Then Already exist message should be displayed on the screen
 
-
   Scenario: Edit Fields (Positive)
-
     When Enter the name of the fields you added in test case one in the name field to edit
     Then Success message should be displayed on the screen
 
-
   Scenario: Delete Fields (Positive)
-
     When Enter the name of the fields you edited in test case three in the name field and press the search button and push delete button
     Then Success message should be displayed on the screen
 
-
   Scenario: Delete Fields (Negative)
-
     When Enter the name of the fields you edited in test case three in the name field
     And Click on the element in Dialog
       | searchButton |

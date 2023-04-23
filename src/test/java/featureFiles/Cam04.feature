@@ -9,7 +9,6 @@ Feature:Document Types  Functionality
       | parameters    |
       | documentTypes |
 
-
   Scenario Outline:Add Document Types
     When Admin Add New Document Type name as "<name>" stage as <stage>
     And Click save button
@@ -18,7 +17,6 @@ Feature:Document Types  Functionality
     Examples:
       | name     | stage |
       | cambrige | 3     |
-
 
   Scenario Outline:Edit Document Type
     When Admin Edit Document name as "<name>" stage as <stage>
@@ -31,7 +29,6 @@ Feature:Document Types  Functionality
       | name     | stage | newname    |
       | cambrige | 4     | cambrige10 |
 
-
   Scenario Outline:Delete Document Type  (Positive Test)
     When Admin Delete Document name as "<name>" stage as <stage>
     And Click Delete button
@@ -40,7 +37,6 @@ Feature:Document Types  Functionality
     Examples:
       | name       | stage |
       | cambrige10 | 4     |
-
 
   Scenario Outline:Delete Document Type (Negative Test)
     When Admin again Delete Document name as "<name>" stage as <stage>

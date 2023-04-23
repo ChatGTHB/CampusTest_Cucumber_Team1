@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7ce9bb45-a98e-4c50-8da0-3abd50fb7599" name="Changes" comment="Test report added.">
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Cam02.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Cam02.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Cam04.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Cam04.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Cam05.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Cam05.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Cam06.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Cam06.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Cam07.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Cam07.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Cam08.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Cam08.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Cam09.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Cam09.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Cam10.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Cam10.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Cam11.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Cam11.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Cam12.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Cam12.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Cam13.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Cam13.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/featureFiles/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/featureFiles/Login.feature" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="cam-02" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a5b4c7f7-9f34-4418-afe9-e7ea7dfb2599" />
+        <option name="url" value="https://github.com/TestingGroup01/CampusTestTeam1.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2NmrmT7MCfpwc7bNASeUYpnH4Zb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/cihat/IdeaProjects/CampusTestTeam1&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\cihat\IdeaProjects\CampusTestTeam1\src\test\java\featureFiles" />
+      <recent name="C:\Users\cihat\IdeaProjects\TestingProject_06_Selenium_Cucumber\src\test\java" />
+      <recent name="C:\Users\cihat\IdeaProjects\TestingProject_06_Selenium_Cucumber\src\test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cihat\IdeaProjects\TestingProject_06_Selenium_Cucumber\src\test\java\featureFiles" />
+      <recent name="C:\Users\cihat\IdeaProjects\TestingProject_06_Selenium_Cucumber\src\test\java\xml" />
+      <recent name="C:\Users\cihat\IdeaProjects\TestingProject_06_Selenium_Cucumber\src\test\java\stepDefinitions" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="runners" />
+      <recent name="stepDefinitions" />
+      <recent name="pages" />
+      <recent name="utilities" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Feature: Cam02" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/featureFiles/Cam02.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="CampusTestTeam1" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: Cam02" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Adding &quot;Position Categories&quot; (Positive test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/featureFiles/Cam02.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="CampusTestTeam1" />
+      <option name="NAME_FILTER" value="^Adding \&quot;Position Categories\&quot; \(Positive test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Adding \&quot;Position Categories\&quot; \(Positive test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Adding &quot;Position Categories&quot; (Positive test)" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Deleted &quot;Position Categories&quot; (Negative Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/featureFiles/Cam02.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="CampusTestTeam1" />
+      <option name="NAME_FILTER" value="^Deleted \&quot;Position Categories\&quot; \(Negative Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Deleted \&quot;Position Categories\&quot; \(Negative Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Deleted &quot;Position Categories&quot; (Negative Test)" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Deleted &quot;Position Categories&quot; (Positive Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/featureFiles/Cam02.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="CampusTestTeam1" />
+      <option name="NAME_FILTER" value="^Deleted \&quot;Position Categories\&quot; \(Positive Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Deleted \&quot;Position Categories\&quot; \(Positive Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Deleted &quot;Position Categories&quot; (Positive Test)" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Editing &quot;Position Categories&quot; (Positive Test)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/featureFiles/Cam02.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="CampusTestTeam1" />
+      <option name="NAME_FILTER" value="^Editing \&quot;Position Categories\&quot; \(Positive Test\)$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Editing \&quot;Position Categories\&quot; \(Positive Test\)$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Editing &quot;Position Categories&quot; (Positive Test)" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber Java.Scenario: Editing &quot;Position Categories&quot; (Positive Test)" />
+        <item itemvalue="Cucumber Java.Scenario: Deleted &quot;Position Categories&quot; (Positive Test)" />
+        <item itemvalue="Cucumber Java.Scenario: Deleted &quot;Position Categories&quot; (Negative Test)" />
+        <item itemvalue="Cucumber Java.Scenario: Adding &quot;Position Categories&quot; (Positive test)" />
+        <item itemvalue="Cucumber Java.Feature: Cam02" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ce9bb45-a98e-4c50-8da0-3abd50fb7599" name="Changes" comment="" />
+      <created>1680280259238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680280259238</updated>
+    </task>
+    <task id="LOCAL-00001" summary="updated">
+      <created>1680302259287</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680302259287</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated">
+      <created>1680398604546</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680398604546</updated>
+    </task>
+    <task id="LOCAL-00003" summary="syntax">
+      <created>1680398669691</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680398669691</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated">
+      <created>1680433161016</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680433161016</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated">
+      <created>1680441348465</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680441348465</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated">
+      <created>1680444335301</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680444335301</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated">
+      <created>1680445588111</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680445588111</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated">
+      <created>1680446010977</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680446010977</updated>
+    </task>
+    <task id="LOCAL-00009" summary="updated">
+      <created>1680521033677</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680521033677</updated>
+    </task>
+    <task id="LOCAL-00010" summary="updated">
+      <created>1680521286134</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680521286134</updated>
+    </task>
+    <task id="LOCAL-00011" summary="updated">
+      <created>1680521406976</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680521406976</updated>
+    </task>
+    <task id="LOCAL-00012" summary="the names of the features were updated">
+      <created>1680890600319</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680890600319</updated>
+    </task>
+    <task id="LOCAL-00013" summary="the names of the step classes were updated">
+      <created>1680890628199</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680890628199</updated>
+    </task>
+    <task id="LOCAL-00014" summary="syntax">
+      <created>1680890642992</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680890642992</updated>
+    </task>
+    <task id="LOCAL-00015" summary="test enviroment organization in common pages">
+      <created>1681040605673</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681040605673</updated>
+    </task>
+    <task id="LOCAL-00016" summary="The pages like Login.feature that contains common function were added.">
+      <created>1681158805827</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681158805827</updated>
+    </task>
+    <task id="LOCAL-00017" summary="The pages like Login.feature that contains common function were added.">
+      <created>1681158996347</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681158996347</updated>
+    </task>
+    <task id="LOCAL-00018" summary="syntax">
+      <created>1681162149600</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681162149600</updated>
+    </task>
+    <task id="LOCAL-00019" summary="syntax">
+      <created>1681674562829</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1681674562829</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Some Cam02 locators and methods added.">
+      <created>1681675720736</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681675720736</updated>
+    </task>
+    <task id="LOCAL-00021" summary="syntax">
+      <created>1681676234132</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1681676234132</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Renamed editButtonPositionCategories element to editButton">
+      <created>1681736317052</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681736317052</updated>
+    </task>
+    <task id="LOCAL-00023" summary="DialogContent updated.">
+      <created>1681769822739</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1681769822739</updated>
+    </task>
+    <task id="LOCAL-00024" summary="LeftNav updated.">
+      <created>1681769934995</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1681769934995</updated>
+    </task>
+    <task id="LOCAL-00025" summary="LeftNav and DialogContent updated.">
+      <created>1681832326563</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1681832326563</updated>
+    </task>
+    <task id="LOCAL-00026" summary="DialogContent updated.">
+      <created>1681851037051</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1681851037051</updated>
+    </task>
+    <task id="LOCAL-00027" summary="DialogContent updated.">
+      <created>1681851205696</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1681851205696</updated>
+    </task>
+    <task id="LOCAL-00028" summary="DialogContent updated.">
+      <created>1681853117641</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1681853117641</updated>
+    </task>
+    <task id="LOCAL-00029" summary="DialogContent updated.">
+      <created>1681910258056</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1681910258056</updated>
+    </task>
+    <task id="LOCAL-00030" summary="LeftNav updated.">
+      <created>1681910297088</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1681910297088</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Formal adjustments have been made to the contents.">
+      <created>1681910708822</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1681910708822</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Formal adjustments have been made to the contents.">
+      <created>1681910881306</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1681910881306</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Formal adjustments have been made to the contents.">
+      <created>1681911022567</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1681911022567</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Formal adjustments have been made to the contents.">
+      <created>1681914188492</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1681914188492</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Formal adjustments have been made to the contents.">
+      <created>1681914372507</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1681914372507</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Syntax">
+      <created>1681941569973</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1681941569973</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Syntax">
+      <created>1681941983044</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1681941983044</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Formal adjustments have beeen made to the contents.">
+      <created>1681944764287</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1681944764287</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Formal adjustments have been made to the contents.">
+      <created>1681944782432</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1681944782432</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Formal adjustments have been made to the contents.">
+      <created>1681946398594</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1681946398594</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Formal adjustments have been made to the contents.">
+      <created>1681979462272</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1681979462272</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Cam02.feature updated">
+      <created>1681980120677</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1681980120677</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Cam03.feature updated">
+      <created>1681983166070</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1681983166070</updated>
+    </task>
+    <task id="LOCAL-00044" summary="A separate TestRunner class was created for each feature.">
+      <created>1681984144958</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1681984144958</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Test report added.">
+      <created>1682240885239</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1682240885239</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="f9982a74-a7b0-46e1-b40b-b1ddac727ee5" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="f9982a74-a7b0-46e1-b40b-b1ddac727ee5">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated" />
+    <MESSAGE value="the names of the features were updated" />
+    <MESSAGE value="the names of the step classes were updated" />
+    <MESSAGE value="test enviroment organization in common pages" />
+    <MESSAGE value="The pages like Login.feature that contains common function were added." />
+    <MESSAGE value="Some Cam02 locators and methods added." />
+    <MESSAGE value="syntax" />
+    <MESSAGE value="Renamed editButtonPositionCategories element to editButton" />
+    <MESSAGE value="LeftNav and DialogContent updated." />
+    <MESSAGE value="DialogContent updated." />
+    <MESSAGE value="LeftNav updated." />
+    <MESSAGE value="Syntax" />
+    <MESSAGE value="Formal adjustments have beeen made to the contents." />
+    <MESSAGE value="Formal adjustments have been made to the contents." />
+    <MESSAGE value="Cam02.feature updated" />
+    <MESSAGE value="Cam03.feature updated" />
+    <MESSAGE value="A separate TestRunner class was created for each feature." />
+    <MESSAGE value="Test report added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test report added." />
+  </component>
+</project>

@@ -1,4 +1,3 @@
-
 Feature:School Departments  Functionality
 
   Background:

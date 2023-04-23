@@ -1,4 +1,3 @@
-
 Feature:School Locations  Functionality
 
   Background:
