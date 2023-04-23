@@ -1,7 +1,7 @@
 package stepDefinitions;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.WebElement;
 import pages.DialogContent;
 import pages.LeftNav;
