@@ -1,4 +1,3 @@
-
 Feature:School Departments  Functionality
 
   Background:
@@ -30,9 +29,3 @@ Feature:School Departments  Functionality
   Scenario: Delete to Departments (negative)
     When click to  departments
     Then Element should not displayed
-
-
-
-
-
-

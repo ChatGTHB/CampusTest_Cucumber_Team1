@@ -1,7 +1,6 @@
 Feature: Discount Functionality
 
   Background: Login, Parameters and Discounts Functionalities
-
     Given Navigate to Campus
     When Enter username and password and click button
     Then User should login successfully
@@ -12,7 +11,6 @@ Feature: Discount Functionality
 
 
   Scenario Outline: Discounts Add Feature (Positive Test)
-
     Then Click on the element in Dialog
       | addButton |
 
@@ -32,9 +30,7 @@ Feature: Discount Functionality
       | descriptionInput | intCode | prrtyCode |
       | Cam12            | 13      | 14        |
 
-
   Scenario Outline: Discounts Add Feature (Negative Test)
-
     Then Click on the element in Dialog
       | addButton |
 
@@ -54,9 +50,7 @@ Feature: Discount Functionality
       | descriptionInput | intCode | prrtyCode |
       | Cam12            | 13      | 14        |
 
-
   Scenario Outline: Discounts Edit Feature
-
     When User sending the keys in Dialog Content
       | descriptionSearch              | <descriptionInput> |
       | discountsIntegrationCodeSearch | <intCode>          |
@@ -69,9 +63,7 @@ Feature: Discount Functionality
       | descriptionInput | intCode |
       | Cam12            | 13      |
 
-
   Scenario Outline: Discounts Delete Feature (Positive Test)
-
     Then User delete input from Dialog Content
       | <descriptionInput> |
 
@@ -81,9 +73,7 @@ Feature: Discount Functionality
       | descriptionInput |
       | Cam99            |
 
-
   Scenario Outline: Discounts Delete Feature (Negative Test)
-
     When User sending the keys in Dialog Content
       | descriptionSearch              | <descriptionInput> |
       | discountsIntegrationCodeSearch | <intCode>          |
@@ -96,6 +86,3 @@ Feature: Discount Functionality
     Examples:
       | descriptionInput | intCode |
       | Cam99            | 44      |
-
-
-
