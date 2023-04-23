@@ -34,4 +34,3 @@ Feature:  Bank Account Setup
     And Click Bank Accounts Edit Button
     And Fill the Edit Blanks and save
     Then  Verify that Edit Element is Visible
-

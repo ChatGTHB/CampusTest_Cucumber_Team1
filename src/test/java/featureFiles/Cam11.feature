@@ -1,4 +1,4 @@
-Feature:  Grade Levels Setup
+Feature:  Bank Account Setup
 
   Background:
     Given Navigate to Campus
@@ -34,6 +34,3 @@ Feature:  Grade Levels Setup
     When Click Setup button Parameters Button and Grade Levels Button
     And Re-enter a deleted data and try to delete First Delete Element
     Then Verify that the first delete key is not visible
-
-
-

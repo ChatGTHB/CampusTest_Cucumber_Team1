@@ -62,7 +62,6 @@ Feature: Discount Functionality
       | descriptionInput | intCode |
       | Cam12            | 13      |
 
-
   Scenario Outline: Discounts Delete Feature (Positive Test)
     Then User delete input from Dialog Content
       | <descriptionInput> |
@@ -72,7 +71,6 @@ Feature: Discount Functionality
     Examples:
       | descriptionInput |
       | Cam99            |
-
 
   Scenario Outline: Discounts Delete Feature (Negative Test)
     When User sending the keys in Dialog Content

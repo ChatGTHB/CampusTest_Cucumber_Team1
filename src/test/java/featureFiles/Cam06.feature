@@ -37,8 +37,3 @@ Feature:Human Resources  Functionality
     And Click on the Setup option and Positions option
     And Enter name and short name and click on search button
     Then System should display no data message
-
-
-
-
-

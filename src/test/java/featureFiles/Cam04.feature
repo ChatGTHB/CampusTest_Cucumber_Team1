@@ -46,12 +46,3 @@ Feature:Document Types  Functionality
     Examples:
       | name       | stage |
       | cambrige10 | 4     |
-
-
-
-
-
-
-
-
-

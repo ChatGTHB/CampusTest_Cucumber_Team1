@@ -30,7 +30,3 @@ Feature: Cam7
     And Enter the Subject Categories will be delete
     And Clicks on search button
     Then There is no data to show message is displayed
-
-
-
-
