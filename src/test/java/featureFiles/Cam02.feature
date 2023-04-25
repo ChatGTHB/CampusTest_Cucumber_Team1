@@ -1,4 +1,4 @@
-Feature: Human Resources Setup
+Feature: Add (Positive-Negative) - Edit and Delete (Positive-Negative) Functionality for Position Categories under Human Resources
 
   Background:
     Given Navigate to Campus
