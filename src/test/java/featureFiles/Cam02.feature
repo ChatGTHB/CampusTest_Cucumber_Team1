@@ -1,4 +1,4 @@
-Feature: Human Resources Setup
+Feature: Add - Edit and Delete Functionality for Position Categories under Human Resources
 
   Background:
     Given Navigate to Campus
