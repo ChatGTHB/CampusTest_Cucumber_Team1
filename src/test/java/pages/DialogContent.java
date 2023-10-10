@@ -22,7 +22,7 @@ public class DialogContent extends Parent {
     public WebElement password;
     @FindBy(css = "button[aria-label='LOGIN']")
     public WebElement loginButton;
-    @FindBy(css = "span[class='mat-tooltip-trigger logo-text']")
+    @FindBy(css="span[class='mat-mdc-tooltip-trigger logo-text']")
     public WebElement textTechnoStudy;
 
     @FindBy(xpath = "//ms-add-button[contains(@tooltip,'ADD')]//button")
